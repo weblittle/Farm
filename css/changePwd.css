@@ -1,0 +1,146 @@
+.content{
+	width:560px;
+	height:460px;
+	position: relative;
+	box-sizing: border-box;
+	background: #F3F6F4;
+	border: 1px solid #666;
+	border-radius: 5px;
+	margin:110px auto;
+	font-family: '微软雅黑';
+}
+.content h4{
+	text-align: center;
+	margin-top: 38px;
+	font-size: 16px;
+	color:#333333;
+}
+/* 原密码 */
+.divSection div:nth-child(1) label
+{
+	position: absolute;
+	left:158px;
+	top:123px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#666666;
+}
+.divSection div:nth-child(1) input
+{
+	position: absolute;
+	width:145px;
+	height:19px;
+	left:231px;
+	top:119px;
+	border:1px solid #A9A9A9;
+	font-size: 13px;
+	color:#000000;
+}
+/* 新密码 */
+.divSection div:nth-child(2) label
+{
+	position: absolute;
+	left:158px;
+	top:197px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#666666;
+}
+.divSection div:nth-child(2) input
+{
+	position: absolute;
+	width:145px;
+	height:19px;
+	left:231px;
+	top:193px;
+	border:1px solid #A9A9A9;
+	font-size: 13px;
+	color:#000000;
+}
+.divSection div:nth-child(2) p
+{
+	position: absolute;
+	left:231px;
+	top:225px;
+	font-size: 13px;
+	color:#666666;
+}
+/* 确认密码 */
+.divSection div:nth-child(3) label
+{
+	position: absolute;
+	left:158px;
+	top:270px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#666666;
+}
+.divSection div:nth-child(3) input
+{
+	position: absolute;
+	width:145px;
+	height:19px;
+	left:231px;
+	top:267px;
+	border:1px solid #A9A9A9;
+	font-size: 13px;
+	color:#000000;
+}
+/* 按钮“下一步” */
+#next
+{
+	position: absolute;
+	width:80px;
+	height:30px;
+	left:240px;
+	top:360px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 更改密码成功后 */
+.changePwdAfter
+{
+	display: none;
+}
+/* 成功图片 */
+.changePwdAfter img
+{
+	position: absolute;
+	width:87px;
+	height:87px;
+	left:160px;
+	top:136px;
+}
+.changePwdAfter div p:nth-child(1)
+{
+	position: absolute;
+	left:260px;
+	top:168px;
+	font-family:"微软雅黑";
+	font-size: 18px;
+	color:#666666;
+}
+.changePwdAfter div p:nth-child(2)
+{
+	position: absolute;
+	left:260px;
+	top:205px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666666;
+}
+/* 按钮“登录试试” */
+.changePwdAfter #loginTest
+{
+	position: absolute;
+	left:232px;
+	top:360px;
+	width:95px;
+	height:30px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}

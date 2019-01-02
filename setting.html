@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>setting</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/amazeui.min.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/setting.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/amazeui.min.js"></script>
+	<script src="js/setting.js"></script>
+
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- 头部信息 -->
+		<div class="head">
+			<div id="logo">
+				<img src="imges/logo-mini.png">
+			</div>
+			<div id="nav">
+				<div id="nav1" title="农场概况" class="nav-ico" onclick="javascript:location.href='index.html' ">
+					<img src="imges/head/nav11.png" onmouseover="this.src='imges/head/nav1.png';" onmouseout="this.src='imges/head/nav11.png';">
+				</div>
+				<div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+					<img src="imges/head/nav22.png" onmouseover="this.src='imges/head/nav2.png';" onmouseout="this.src='imges/head/nav22.png';">
+				</div>
+				<div id="nav3" title="视频监控" class="nav-ico">
+					<img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';" onmouseout="this.src='imges/head/nav33.png';">
+				</div>
+				<div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+					<img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';" onmouseout="this.src='imges/head/nav44.png';">
+				</div>
+				<div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='History.html' ">
+					<img src="imges/head/nav55.png" onmouseover="this.src='imges/head/nav5.png';" onmouseout="this.src='imges/head/nav55.png';">
+				</div>
+				<div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+					<img src="imges/head/nav6.png" onmouseover="this.src='imges/head/nav66.png';" onmouseout="this.src='imges/head/nav6.png';">
+				</div>
+				<div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+					<img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';" onmouseout="this.src='imges/head/nav77.png';">
+				</div>
+				<div id="nav8" title="关于" class="nav-ico" onclick="javascript:location.href='aboutSystem.html' ">
+					<img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';" onmouseout="this.src='imges/head/nav88.png';">
+				</div>
+			</div>
+			<div id="user" title="账户">
+				<img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';" onmouseout="this.src='imges/head/nav99.png';">
+				<div id="accountForm">
+						<img src="imges/u122.png" alt="">
+						<p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+						<hr>
+						<p><a href="login.html" id="logOff">注销</a></p>
+				</div>
+				<script>
+					$("#user").click(function(){
+						$("#accountForm").show();
+					})
+					$("#accountForm").mouseleave(function(){
+						$("#accountForm").hide();
+					})
+				</script>
+			</div>
+			<hr id="hr">
+		</div>
+		<!-- 内容 -->
+		<div class="content">
+			<div id="content-list">
+				<p id="user-manage" class="active">
+					<span>用户管理</span>
+				</p>
+				<p id="equip-manage">
+					<span>设备管理</span>
+				</p>
+				<p id="dapeng-info">
+					<span>大棚信息</span>
+				</p>
+			</div>
+			<div id="content-show">
+				<!-- 用户管理区域 -->
+				<div id="user-manage-show" class="show-content">
+					<div class="one">
+						<select name="" class="farm" id="user-select-farm">
+
+						</select>
+						<span id="userInfoText">的用户信息</span>
+						<button id="btn-add">添加新用户</button>
+						<button id="btn-log">注册新用户</button>
+					</div>
+					<div class="user-manage">
+						<table id="table" border="1" cellspacing="0" cellpadding="0">
+							<tr id="tableHead">
+								<th class="orderNumCol">序号</th>
+								<th class="farmNumCol">大棚号</th>
+								<th class="userNameCol">用户姓名</th>
+								<th class="userTypeCol">用户类型</th>
+								<th class="phoneNumCol">手机号</th>
+								<th class="operateCol">操作</th>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- 设备管理区域 -->
+				<div id="equip-manage-show" class="show-content">
+					<div class="equip-farm-list">
+						<select name="" id="equip-select-farm" class="farm">
+						</select>
+						<span>的设备列表</span>
+						<button id="btn-log-equip">注册新设备</button>
+					</div>
+					<div class="equip-table-show">
+						<table class="equip-farm-table" id="equip-table1" border="1" cellpadding="0" cellspacing="0">
+							<tr id="equipTableHead">
+								<th>序号</th>
+								<th>大棚号</th>
+								<th>控制柜编号</th>
+								<th>设备编号</th>
+								<th>设备类型</th>
+								<th>备注</th>
+								<th>设备状态</th>
+								<th>操作</th>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+				<!-- 大棚信息区域 -->
+				<div id="dapeng-info-show" class="show-content">
+					<button id="btn-log-farm">注册新大棚</button>
+					<div id="existFarm">
+						<table class="dapeng-info-table" id="dapeng-info-table1" border="1" cellspacing="0" cellpadding="0">
+							<tr id="tableHeadFarm">
+								<th>序号</th>
+								<th>大棚号</th>
+								<th>种植种类</th>
+								<th>管理员姓名</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+	
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- 用户管理页面删除提示框 -->
+		<div id="userManage-deleteForm">
+			<img src="imges/close.png" alt="" id="closeIcon">
+			<img src="imges/warning.png" alt="" id="warnIcon">
+			<div class="warnInfo">
+				<span>
+					您确定要删除该用户及其相关信息吗？
+				</span>
+				<br>
+				<span>
+					删除后该用户将无法再登录系统！
+				</span>
+			</div>
+
+			<div class="btns">
+				<button id="deleteSure">确定</button>
+				<button id="deleteCancle">取消</button>
+			</div>
+		</div>
+		<!-- 设备管理页面某个大棚删除提示框 -->
+		<div id="equipManage-deleteForm">
+			<img src="imges/close.png" alt="" id="closeIcon-equip">
+			<img src="imges/warning.png" alt="">
+			<div class="warnInfo-equip">
+				<span>
+					您确定要删除该设备吗？
+				</span>
+				<br>
+				<span>
+					删除后该设备将被归到未分配设备中，如需使用请联系
+					<br>农场管理员。
+				</span>
+				<p>
+					<span>设备的状态:</span> 
+					<select name="" id="deviceState">
+						<option value="0">无故障</option>
+						<option value="1">故障</option>
+					</select>
+				</p>
+			</div>
+
+			<div class="deleteEquipBtns">
+				<button id="deleteDeviceSure">确定</button>
+				<button id="deleteDeviceCancle">取消</button>
+			</div>
+		</div>
+		<!-- 设备管理页面删除未分配设备弹出框 -->
+		<div id="equipManage-deleteUnassignDevice">
+			<img src="imges/close.png" alt="" id="closeIcon-unassign-equip">
+			<img src="imges/warning.png" alt="">
+			<div class="warnInfo-equip">
+				<span>
+					您确定要永久删除该设备吗？
+				</span>
+				<br>
+				<span>
+					该操作不会删除该设备之前记录的数据！
+				</span>
+			</div>
+
+			<div class="btns">
+				<button id="deleteUnassignDeviceSure">确定</button>
+				<button id="deleteUnassignDeviceCancle">取消</button>
+			</div>
+		</div>
+		<!-- 大棚信息页面删除大棚弹出框 -->
+		<div id="dapengInfo-deleteFarm">
+			<img src="imges/close.png" alt="" id="closeIcon-deleteFarm">
+			<img src="imges/warning.png" alt="">
+			<div class="warnInfo">
+				<span>
+					您确定要删除该大棚及其相关数据吗？
+				</span>
+				<br>
+				<span>
+					相关数据包括大棚传感器的历史数据记录！
+				</span>
+			</div>
+
+			<div class="btns">
+				<button id="deleteFarmSure">确定</button>
+				<button id="deleteFarmCancle">取消</button>
+			</div>
+		</div>
+		<!-- 用户管理区域的编辑框 -->
+		<div class="editForm" id="edit">
+			<div class="editForm-top">
+				<div>
+					<img src="imges/close.png" alt="" class="edit-close">
+				</div>
+				<p class="ownInfo">个人信息</p>
+				<div class="manPic">
+					<div class="userImg">
+						<img src="" alt="" id="userImage">
+					</div>
+					<div class="text">
+						<p>
+							<span class="nameText">姓名:</span>
+							<span id="name"></span>
+						</p>
+						<p>
+							<span class="genderText">性别:</span>
+							<span id="gender"></span>
+						</p>
+					</div>
+				</div>
+				<div class="user-info">
+					<p class="user-key">
+						<span class="key">用户名:</span>
+						<span class="value" id="userName"></span>
+					</p>
+					<p class="user-key">
+						<span class="key">手机号:</span>
+						<input type="text" id="phoneNum">
+						<span class="star">*</span>
+						<span class="tip">(请输入11位手机号用于接收警报提示)</span>
+					</p>
+					<p class="user-key">
+						<span class="key">身份证号:</span>
+						<span id="idCard"></span>
+					</p>
+					<p class="user-key">
+						<span class="key">用户类型:</span>
+						<select name="" class="user-type">
+							<option value="0">游客</option>
+							<option value="1">管理员</option>
+						</select>
+					</p>
+				</div>
+			</div>
+			<hr class="fengeUserEdit">
+			<div class="editForm-bottom">
+				<div class="bottom-content">
+					<div class="div">
+						<span>该用户新增负责的大棚</span>
+						<select name="" class="newfarm">
+					
+						</select>
+						<input type="button" value="添加" class="btnAdd">
+					</div>
+					<p class="div">该用户已负责大棚列表</p>
+					<div id="havefarm-list" class="div">
+						<table id="farm-list-table" border="1" cellpadding="0" cellspacing="0">
+						</table>
+					</div>
+					<div class="div">
+						<input type="button" value="更新" class="update">
+						<input type="button" value="取消" class="cancel">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 设备编辑框 -->
+		<div id="equip-table-edit">
+			<div id="editForm-content">
+				<div>
+					<img src="imges/close.png" alt="" class="equip-close">
+				</div>
+				<p>编辑设备信息</p>
+				<div class="top-left">
+					<p>设备照片</p>
+					<div class="picture">
+						<img src="" alt="" id="deviceImage">
+					</div>
+					<button>上传</button>
+				</div>
+				<div class="top-right">
+					<div>
+						<span class="spanText">设备归属:</span>
+						<select name="" id="belongFarm">
+							<option id="firstOption">请选择归属大棚</option>
+						</select>
+					</div>
+					<div>
+						<span class="spanText">控制柜编号:</span>
+						<select name="" id="boxId">
+						</select>
+					</div>
+					<div>
+						<span class="spanText">设备编号:</span>
+						<span id="deviceId">10001</span>
+					</div>
+					<div>
+						<span class="spanText">设备类型:</span>
+						<span id="deviceType">土壤湿度</span>
+					</div>
+					<div>
+						<span class="spanText">备注:</span>
+						<span id="remark">土壤湿度</span>
+					</div>
+					<div>
+						<span class="spanText">设备状态:</span>
+						<span id="deviceState">已启用</span>
+					</div>
+				</div>
+				<div class="bottom">
+					<button id="updateForUnassignDevice">更新</button>
+					<button>取消</button>
+				</div>
+			</div>
+		</div>
+		<!-- 大棚信息编辑框 -->
+		<div id="dapeng-info-table-edit">
+			<div class="table-edit-head">
+				<div>
+					<img src="imges/close.png" alt="" class="dapeng-info-close">
+				</div>
+				<p>编辑大棚信息</p>
+			</div>
+			<div class="dapeng-info-top-left">
+				<p>作物照片</p>
+				<div class="dapeng-infoPic">
+					<img src="imges/caomei.png" alt="">
+				</div>
+				<button>上传</button>
+			</div>
+			<div class="dapeng-info-top-right">
+				<div>
+					<span class="dapeng-infoSpan">大棚名称:</span>
+					<input type="text" id="farmName">
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">种植种类:</span>
+					<input type="text" id="cropName">
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">种植时间:</span>
+
+					<form action="" class="am-form" data-am-validator>
+						<input type="text" class="am-form-field" data-am-datepicker id="startTime">
+					</form>
+
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">收获时间</span>
+
+					<form action="" class="am-form" data-am-validator>
+						<input type="text" class="am-form-field" data-am-datepicker id="endTime">
+					</form>
+				</div>
+				<div>
+					<span>适宜温度:</span>
+					<input class="inputNum" type="number" maxlength="2" value="" id="minTemp"><span>°C~</span>
+					<input type="number" maxlength="2" value="" id="maxTemp"><span>°C</span>
+				</div>
+				<div>
+					<span>适宜湿度:</span>
+					<input class="inputNum" type="number" maxlength="2" value="" id="minMoist"><span>%~</span>
+					<input type="number" maxlength="2" value="" id="maxMoist"><span>%</span>
+				</div>
+			</div>
+			<div class="dapeng-info-bottom">
+				<button class="updateDapengInfo">更新</button>
+				<button class="cancelDapengInfo">取消</button>
+			</div>
+		</div>
+		<!-- 注册新用户 -->
+		<div id="reg-new-user">
+			<form>
+				<div class="logForm-top">
+					<div>
+						<img src="imges/close.png" alt="" class="log-close">
+					</div>
+					<p class="ownInfo">个人信息</p>
+					<div class="log-manPic">
+						<img src="imges/manImage.png" alt="">
+					</div>
+					<div class="log-text">
+
+						<label for="" id="name">姓名:</label>
+						<input type="text" required="required" id="nameInput">&nbsp;
+						<span>*</span>
+						<!-- <p id="nameTip"></p> -->
+						<label for="" id="sex">性别:</label>
+						<select name="" id="sexSelect">
+							<option value="0">男</option>
+							<option value="1">女</option>
+						</select>
+					</div>
+					<div class="log-user-info">
+
+						<p class="log-user-key">
+							<span class="log-key">用户名:
+							</span>
+							<input type="text" id="inputUserName" required>
+							<span class="log-star">*</span>
+							<span class="log-tip" id="userNameTip">(请选用英文、数字或英文数字组合)
+							</span>
+						</p>
+						<p class="log-user-key">
+							<span class="log-key">密码:
+							</span>
+							<input type="password" id="pwd" required>
+							<span class="log-star">*
+							</span>
+						</p>
+						<p class="log-user-key">
+							<span class="log-key">手机号:
+							</span>
+							<input type="text" id="phoneNum" required>
+							<span class="log-star">*</span>
+							<span class="log-tip" id="phoneTip">(请输入11位手机号用于接收警报提示)</span>
+						</p>
+						<p class="log-user-key">
+							<span class="log-key">身份证号:
+							</span>
+							<input type="text" id="inputCard" required>
+							<span class="log-star">*</span>
+						</p>
+						<p class="log-user-key">
+							<span class="log-key">用户类型:
+							</span>
+							<select name="" class="log-user-type" id="selectUserType">
+								<option value="0">管理员</option>
+								<option value="1">游客</option>
+							</select>
+						</p>
+					</div>
+				</div>
+				<div class="buttons">
+					<div class="log-div">
+						<input type="button" value="确定" class="log-sure">
+						<input type="button" value="取消" class="log-cancel">
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- 添加新用户功能 -->
+		<div id="add-new-user">
+			<div>
+				<img src="imges/close.png" alt="" class="log-close">
+				<p id="title">添加用户到大棚</p>
+				<div id="name">
+					<label for="">姓名：</label>
+					<input type="text">
+				</div>
+				<div id="phone">
+					<label for="">手机号:</label>
+					<input type="text">
+					<button id="search">搜索</button>
+				</div>
+			</div>
+			<img src="imges/add-new-user.png" alt="">
+			<div id="tableDiv">
+				<table id="searchResultTable" cellspacing="0" cellpadding="0" border="1">
+					<tr id="tableHead">
+						<th>序号</th>
+						<th>姓名</th>
+						<th>用户类型</th>
+						<th>手机号</th>
+						<th>操作</th>
+					</tr>
+				</table>
+			</div>
+			<div id="button">
+				<button id="btn-add">添加</button>
+				<button id="btn-cancel">取消</button>
+			</div>
+		</div>
+		<!-- 注册新设备 -->
+		<div id="reg-new-equip">
+			<div class="equip-reg-head">
+				<div>
+					<img src="imges/close.png" alt="" class="equip-reg-close">
+				</div>
+				<p>新设备信息</p>
+			</div>
+			<div class="equip-reg-top-left">
+				<p>设备照片</p>
+				<div class="equip-regPic">
+					<img src="imges/kaiguan.png" alt="">
+				</div>
+				<button>上传</button>
+			</div>
+			<div class="equip-reg-top-right">
+				<div>
+					<span class="equipSpan">设备类型:</span>
+					<select name="" id="deviceTypeSelect">
+						<option value="0">空气湿度</option>
+						<option value="1">空气温度</option>
+						<option value="2">土壤温度</option>
+						<option value="3">土壤湿度</option>
+						<option value="4">光照强度</option>
+						<option value="5">暖风机</option>
+						<option value="6">降温风机</option>
+						<option value="7">循环风机</option>
+						<option value="8">内遮阳</option>
+						<option value="9">内保温</option>
+						<option value="10">滴灌水泵</option>
+						<option value="11">顶窗</option>
+						<option value="12">侧窗</option>
+						<option value="13">补光灯</option>
+					</select>
+				</div>
+				<div>
+					<span class="equipSpan">备注：</span>
+					<input type="text" placeholder="请输入该设备的备注信息" id="remark">
+				</div>
+				<div>
+					<span class="equipSpan">设备归属:</span>
+					<select name="" id="greenHouseSelect">
+						<option value="0">未分配</option>
+						<option value="1">一号大棚</option>
+						<option value="2">二号大棚</option>
+						<option value="3">三号大棚</option>
+					</select>
+				</div>
+				<div>
+					<span class="equipSpan">控制柜编号:</span>
+					<select name="" id="deviceBoxSelect">
+						<option value="0">待定</option>
+						<option value="1">新建</option>
+						<option value="2">A10000</option>
+						<option value="3">B10000</option>
+					</select>
+				</div>
+			</div>
+			<div class="equip-reg-bottom">
+				<button id="newEquipAdd">添加</button>
+				<button>取消</button>
+			</div>
+		</div>
+		<!-- 注册新大棚 -->
+		<div id="reg-new-farm">
+			<div class="table-edit-head">
+				<div>
+					<img src="imges/close.png" alt="" class="dapeng-info-close">
+				</div>
+				<p>创建一个智能大棚</p>
+			</div>
+			<div class="dapeng-info-top-left">
+				<p>种植作物照片</p>
+				<div class="dapeng-infoPic">
+					<img src="imges/caomei.png" alt="" id="cropPic">
+				</div>
+				<button>上传</button>
+			</div>
+			<div class="dapeng-info-top-right">
+				<div>
+					<span class="dapeng-infoSpan">大棚名称:</span>
+					<input type="text" id="farmName">
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">种植种类:</span>
+					<input type="text" id="plantType">
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">种植时间:</span>
+					<input type="date" class="month" id="plantTime">
+				</div>
+				<div>
+					<span class="dapeng-infoSpan">收获时间</span>
+					<input type="date" class="month" id="gainTime">
+				</div>
+				<div>
+					<span class="uniq">适宜温度:</span>
+					<input class="inputNum" id="minTemp" type="number" maxlength="2" value=""><span>°C~</span>	
+					<input type="number" maxlength="2" value="" id="maxTemp"><span>°C</span>
+				</div>
+				<div>
+					<span class="uniq">适宜湿度:</span>
+					<input class="inputNum" id="minMoist" type="number" maxlength="2" value=""><span>%~</span>
+					<input type="number" maxlength="2" value="" id="maxMoist"><span>%</span>
+				</div>
+			</div>
+			<div class="dapeng-info-bottom">
+				<button id="btn-create-farm">创建</button>
+				<button id="cancelRegNewFarm">取消</button>
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<div id="footer">
+			<p>
+				<p id="info">
+					版权所有
+					<span class="fuhao">©&nbsp;2017</span>
+					<a href="http://www.miit.gov.cn/">河南理工大学计算机科学与技术学院物联网系</a>
+				</p>
+				<p id="copyRights">豫
+					<span class="fuhao">ICP</span>备
+					<span class="fuhao">17014461</span>号
+				</p>
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>

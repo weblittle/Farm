@@ -1,0 +1,751 @@
+*{
+    margin: 0;
+    padding: 0;
+ }  
+ html,body{
+    width: 1280px;
+    height:2548px;
+	margin: 0 auto;
+	overflow: auto;
+    transform: translate(0,0);
+ }
+/* 最大盒子 */
+.wrap{
+    position: fixed;
+    box-sizing: border-box;
+    width: 1280px;
+    height:2548px;
+    left:0px;
+    top:0;
+    background-image: url("../imges/aboutSystemImage/background.png");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    -webkit-background-size:cover;
+    background-size:cover;
+    min-width: 800px;
+    min-height: 600px;
+}
+#logo img{
+    position: fixed;
+    width: 235px;
+    height: 44px;
+    left:10px;
+    top:5px;
+}
+/* 图标 */
+ .nav-ico img{
+   width:35px;
+   height:35px;
+} 
+#nav1 img{
+    position: fixed;
+    left:400px;
+    top:8px;
+}
+#nav2 img{
+    position: fixed;
+    left:464px;
+    top:8px;
+}
+#nav3 img{
+    position: fixed;
+    left:527px;
+    top:8px;
+}
+#nav4 img{
+    position: fixed;
+    left:591px;
+    top:8px;
+}
+#nav5 img{
+    position: fixed;
+    left:654px;
+    top:8px;
+}
+#nav6 img{
+    position: fixed;
+    left:718px;
+    top:8px;
+}
+#nav7 img{
+    position: fixed;
+    left:781px;
+    top:8px;
+}
+#nav8 img{
+    position: fixed;
+    left:845px;
+    top:8px;
+}
+#user img{
+    position: fixed;
+    left:1201px;
+    top:8px;
+    width:35px;
+    height:35px;
+}
+/* 系统简介文字 */
+.section1 .title
+{
+	position: fixed;
+	left:574px;
+	top:141px;
+	font-size: 32px;
+	color:#333333;
+}
+/* 实用 */
+/* 图标 */
+#advantage div:nth-child(1) img{
+	position: fixed;
+	width: 206px;
+	height:206px;
+	left:114px;
+	top:272px;
+}
+/* 文字 */
+#userful
+{
+	position: fixed;
+	left:190px;
+	top:520px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color:#333333;
+}
+/* 实用简介 */
+#advantage div:nth-child(1) .details
+{
+	position: fixed;
+	left:110px;
+	top:590px;
+	text-align: center;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color:#333333;
+}
+/* 简洁 */
+/* 图标 */
+#advantage div:nth-child(2) img{
+	position: fixed;
+	width: 206px;
+	height:206px;
+	left:397px;
+	top:272px;
+}
+/* 文字 */
+#simple
+{
+	position: fixed;
+	left:473px;
+	top:520px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color:#333333;
+}
+/* 简洁简介 */
+#advantage div:nth-child(2) .details
+{
+	position: fixed;
+	left:393px;
+	top:590px;
+	text-align: center;
+	font-size:15px;
+	font-family: "微软雅黑";
+	color:#333333;
+}
+/* 便利 */
+/* 图标 */
+#advantage div:nth-child(3) img{
+	position: fixed;
+	width: 206px;
+	height:206px;
+	left:679px;
+	top:272px;
+}
+/* 文字 */
+#convenient
+{
+	position: fixed;
+	left:755px;
+	top:520px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color:#333333;
+}
+/* 便利简介 */
+#advantage div:nth-child(3) .details
+{
+	position: fixed;
+	left:675px;
+	top:590px;
+	text-align: center;
+	font-size:15px;
+	font-family: "微软雅黑";
+	color:#333333;
+}
+/* 省心*/
+/* 图标 */
+#advantage div:nth-child(4) img{
+	position: fixed;
+	width: 206px;
+	height:206px;
+	left:962px;
+	top:272px;
+}
+/* 文字 */
+#savaWorry
+{
+	position: fixed;
+	left:1038px;
+	top:520px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color:#333333;
+}
+/* 省心简介 */
+#advantage div:nth-child(4) .details
+{
+	position: fixed;
+	left:958px;
+	top:590px;
+	text-align: center;
+	font-size:15px;
+	font-family: "微软雅黑";
+	color:#333333;
+}
+/* 开发团队 */
+.section2 .title
+{
+	position: fixed;
+	left:575px;
+	top:756px;
+	font-size:32px;
+	color:#333333;
+}
+/* 成员一 */
+/* 外框 */
+#partner div:nth-child(1)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:101px;
+	top:895px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+/* 成员一头像 */
+/* 相框 */
+#partner div:nth-child(1) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:118px;
+	top:910px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+#partner div:nth-child(1) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:118px;
+	top:910px;
+}
+/* 成员一姓名 */
+#partner div:nth-child(1) .name
+{
+	position:fixed;
+	left:178px;
+	top:1127px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员一职务 */
+#partner div:nth-child(1) .job
+{
+	position: fixed;
+	left: 184px;
+	top:1165px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员一简介 */
+#partner div:nth-child(1) .jobDetails
+{
+	position: fixed;
+	left:117px;
+	top:1209px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 成员二 */
+/* 外框 */
+#partner div:nth-child(2)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:384px;
+	top:895px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+/* 成员二头像 */
+/* 相框 */
+#partner div:nth-child(2) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:401px;
+	top:910px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+#partner div:nth-child(2) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:401px;
+	top:910px;
+}
+/* 成员二姓名 */
+#partner div:nth-child(2) .name
+{
+	position: fixed;
+	left:462px;
+	top:1127px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员二职务 */
+#partner div:nth-child(2) .job
+{
+	position: fixed;
+	left: 460px;
+	top:1165px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员二简介 */
+#partner div:nth-child(2) .jobDetails
+{
+	position: fixed;
+	left:402px;
+	top:1209px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 成员三 */
+/* 外框 */
+#partner div:nth-child(3)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:666px;
+	top:895px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+/* 相框 */
+#partner div:nth-child(3) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:685px;
+	top:912px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+/* 成员三头像 */
+#partner div:nth-child(3) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:683px;
+	top:910px;
+}
+/* 成员三姓名 */
+#partner div:nth-child(3) .name
+{
+	position: fixed;
+	left:744px;
+	top:1127px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员三职务 */
+#partner div:nth-child(3) .job
+{
+	position: fixed;
+	left: 744px;
+	top:1165px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员三简介 */
+#partner div:nth-child(3) .jobDetails
+{
+	position: fixed;
+	left:682px;
+	top:1209px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* QQ */
+#qqIcon{
+	position: fixed;
+	width:29px;
+	height:34px;
+	left: 744px;
+	top:1296px;
+}
+#qqcode
+{
+	position:absolute;
+	z-index: 3;
+	width:200px;
+	height:274px;
+	left:50%;
+	top:50%;
+	margin-left:-100px;
+	margin-top:-137px;
+	display: none;
+}
+/* 微信 */
+#weixinIcon
+{
+	position:fixed;
+	width:34px;
+	height:34px;
+	left:788px;
+	top:1296px;
+}
+
+#wechat
+{
+	position:fixed;
+	z-index: 3;
+	width:323px;
+	height:325px;
+	left:50%;
+	top:50%;
+	margin-left: -161.5px;
+	margin-top:-162.5px;
+	display: none;
+}
+/* 成员四 */
+/* 外框 */
+#partner div:nth-child(4)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:949px;
+	top:895px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+/* 相框 */
+#partner div:nth-child(4) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:968px;
+	top:912px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+/* 成员四头像 */
+#partner div:nth-child(4) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:966px;
+	top:910px;
+}
+/* 成员四姓名 */
+#partner div:nth-child(4) .name
+{
+	position: fixed;
+	left:1026px;
+	top:1127px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员四职务 */
+#partner div:nth-child(4) .job
+{
+	position: fixed;
+	left: 1026px;
+	top:1165px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员四简介 */
+#partner div:nth-child(4) .jobDetails
+{
+	position: fixed;
+	left:966px;
+	top:1209px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 成员五 */
+/* 外框 */
+#partner div:nth-child(5)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:384px;
+	top:1425px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+/* 相框 */
+#partner div:nth-child(5) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:403px;
+	top:1442px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+/* 成员五头像 */
+#partner div:nth-child(5) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:401px;
+	top:1439px;
+}
+/* 成员五姓名 */
+#partner div:nth-child(5) .name
+{
+	position: fixed;
+	left:461px;
+	top:1660px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员五职务 */
+#partner div:nth-child(5) .job
+{
+	position: fixed;
+	left: 461px;
+	top:1698px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员五简介 */
+#partner div:nth-child(5) .jobDetails
+{
+	position: fixed;
+	left:400px;
+	top:1740px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 成员六 */
+/* 外框 */
+#partner div:nth-child(6)
+{
+	position: fixed;
+	width:228px;
+	height:465px;
+	left:667px;
+	top:1425px;
+	background-image: url("../imges/aboutSystemImage/u80.png");
+}
+#partner div:nth-child(6) div
+{
+	position: fixed;
+	width:205px;
+	height:205px;
+	left:684px;
+	top:1439px;
+	background: url("../imges/aboutSystemImage/u84.png");
+	background-repeat: no-repeat;
+}
+/* 成员六头像 */
+#partner div:nth-child(6) div img
+{
+	position: fixed;
+	width:205px;
+	height: 205px;
+	left:684px;
+	top:1439px;
+}
+/* 成员六姓名 */
+#partner div:nth-child(6) .name
+{
+	position: fixed;
+	left:744px;
+	top:1660px;
+	font-size:24px;
+	color:#333333;
+}
+/* 成员六职务 */
+#partner div:nth-child(6) .job
+{
+	position: fixed;
+	left: 744px;
+	top:1698px;
+	font-size:15px;
+	color: #666666;
+}
+/* 成员六简介 */
+#partner div:nth-child(6) .jobDetails
+{
+	position: fixed;
+	left:684px;
+	top:1740px;
+	width:195px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 联系我们 */
+/* 文字“联系我们” */
+.section3 .title
+{
+	position: fixed;
+	left:575px;
+	top:1987px;
+	font-size: 32px;
+	color:#333333;
+}
+/* 电话 */
+.section3 #contact div:nth-child(1)
+{
+	position: fixed;
+	left:118px;
+	top:2121px;
+	width:206px;
+	height:206px;
+}
+/* 图标 */
+.section3 #contact div:nth-child(1) img
+{
+	position: fixed;
+	left:118px;
+	top:2121px;
+	width:206px;
+	height:206px;
+}
+/* 文字说明 */
+.section3 #contact div:nth-child(1) p
+{
+	position: fixed;
+	left:118px;
+	top:2359px;
+	width:206px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 邮件 */
+/* 图标 */
+.section3 #contact div:nth-child(2) img
+{
+	position: fixed;
+	left:401px;
+	top:2121px;
+	width:206px;
+	height:206px;
+}
+/* 文字说明 */
+.section3 #contact div:nth-child(2) p
+{
+	position: fixed;
+	left:401px;
+	top:2359px;
+	width:206px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 地图 */
+/* 图标 */
+.section3 #contact div:nth-child(3) img
+{
+	position: fixed;
+	left:683px;
+	top:2121px;
+	width:206px;
+	height:206px;
+}
+/* 文字说明 */
+.section3 #contact div:nth-child(3) p
+{
+	position: fixed;
+	left:683px;
+	top:2359px;
+	width:206px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 官网 */
+/* 图标 */
+.section3 #contact div:nth-child(4) img
+{
+	position: fixed;
+	left:966px;
+	top:2121px;
+	width:206px;
+	height:206px;
+}
+/* 文字说明 */
+.section3 #contact div:nth-child(4) p
+{
+	position: fixed;
+	left:966px;
+	top:2359px;
+	width:206px;
+	text-align: center;
+	font-size: 15px;
+	color:#333333;
+}
+/* 底部版权信息 */
+
+#info{
+    position: fixed;
+    font-family: "微软雅黑";
+    left:350px;
+    top:2504px;
+	font-size: 13px;
+	color:#333333;
+}
+#info a{
+   text-decoration: none;
+   font-family:"微软雅黑";
+   color:#333333;
+}
+#copyRights{
+    position: fixed;
+    font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+    left:744px;
+    top:2504px;
+}
+.fuhao{
+    font-family: Arial;
+}
+
+
+

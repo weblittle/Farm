@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/userInfo.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/userInfo.js"></script>
+	<title>userInfo</title>
+</head>
+<body>
+<div class="wrap">
+	<!-- 导航栏 -->
+	<div class="head">
+        <div id="logo">
+            <img src="imges/logo-mini.png">
+        </div>
+        <div id="nav">
+            <div id="nav1" title="农场概况" class="nav-ico" onclick="javascript:location.href='index.html' ">
+                <img src="imges/head/nav11.png" onmouseover="this.src='imges/head/nav1.png';"
+                     onmouseout="this.src='imges/head/nav11.png';">
+            </div>
+            <div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+                <img src="imges/head/nav22.png" onmouseover="this.src='imges/head/nav2.png';"
+                     onmouseout="this.src='imges/head/nav22.png';">
+            </div>
+            <div id="nav3" title="视频监控" class="nav-ico">
+                <img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';"
+                     onmouseout="this.src='imges/head/nav33.png';">
+            </div>
+            <div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+                <img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';"
+                     onmouseout="this.src='imges/head/nav44.png';">
+            </div>
+            <div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='History.html' ">
+                <img src="imges/head/nav55.png" onmouseover="this.src='imges/head/nav5.png';"
+                     onmouseout="this.src='imges/head/nav55.png';">
+            </div>
+            <div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+                <img src="imges/head/nav66.png" onmouseover="this.src='imges/head/nav6.png';"
+                     onmouseout="this.src='imges/head/nav66.png';">
+            </div>
+            <div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+                <img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';"
+                     onmouseout="this.src='imges/head/nav77.png';">
+            </div>
+            <div id="nav8" title="关于" class="nav-ico">
+                <img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';"
+                     onmouseout="this.src='imges/head/nav88.png';">
+            </div>
+        </div>
+        <div id="user" title="账户">
+            <img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';"
+                 onmouseout="this.src='imges/head/nav99.png';">
+                 <div id="accountForm">
+						<img src="imges/u122.png" alt="">
+						<p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+						<hr>
+						<p><a href="login.html" id="logOff">注销</a></p>
+					</div>
+					<script>
+						$("#user").click(function(){
+							$("#accountForm").show();
+						})
+						$("#accountForm").mouseleave(function(){
+							$("#accountForm").hide();
+						})
+					</script>
+        </div>
+        <hr id="hr">
+    </div>
+	<!-- 内容部分 -->
+    <div class="content">
+		<h4>个人信息</h4>
+		<!-- 头像部分 -->		
+        <div class="headImage">
+            <img src="" alt="头像">
+        </div>
+        <button id="upload">上传</button>
+		<!-- 信息显示部分 -->
+        <p class="infoP"><span>用户ID:</span><span id="userID"></span></p>
+        <p class="infoP">
+            <span>用户名:</span><span id="userName"></span>
+            <a href="changePwd.html" id="changePwd">更改密码</a>
+        </p>
+        <p class="infoP"><span>姓名:</span><span id="name"></span></p>
+        <p class="infoP"><span>手机号:</span><span id="phoneNum"></span></p>
+        <p class="infoP"><span>身份证号:</span><span id="idCard"></span></p>
+        <p class="infoP"><span>用户类型:</span><span id="userType"></span></p>
+
+    </div>
+</div>
+</body>
+</html>

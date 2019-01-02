@@ -1,0 +1,193 @@
+/*this is the css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr,
+th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*
+html5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ------- Remove Chrome's border around active fields ------- */
+
+*:focus {
+    outline: none;
+}
+/*disabled background and border for input field*/
+input{
+    background: transparent;
+    border:0;
+}
+/*————————————————————————————————*/
+/*--------------------------body--------------------------------*/
+body{
+    background: #eeeeee url("../imges/login/bg.jpg") top left repeat;
+}
+/*-------------------Container--------------*/
+#container{
+    margin: auto;
+    margin-top: 180px;
+    width:524px;
+    height: 262px;
+    text-align: left;
+    font-family:Verdana,Arial;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ffffff;
+}
+/*----------Login Form----------*/
+form{
+    background:url("../imges/login/form-bg.png");
+    width:524px;
+    height:262px;
+    padding-top:1px;
+    position: relative;
+}
+.go{
+    width: 56px;
+    height:78px;
+    position: relative;
+    top:54px;
+    left:440px;
+}
+.go,#login{
+    cursor: pointer;
+}
+.login{
+    width:470px;
+    float: left;
+    margin-top: 33px;
+    margin-left:40px;
+    font-size: 20px;
+}
+.username-text{
+    width:190px;
+    float: left;
+    margin-top:50px;
+    margin-left:40px;
+}
+.password-text{
+    width:290px;
+    float: left;
+    margin-top:50px;
+    margin-left:0;
+}
+.username-field{
+    width:168px;
+    height:38px;
+    float: left;
+    margin-top:10px;
+    margin-left:35px;
+    background: url("../imges/login/username-field.png") center left no-repeat;
+}
+.username-field:hover{
+    background: url("../imges/login/username-field-hover.png") center left no-repeat;
+}
+.password-field{
+    width:280px;
+    height:38px;
+    float: left;
+    margin-top:10px;
+    margin-left:22px;
+    background: url("../imges/login/password-field.png") center left no-repeat;
+}
+.password-field:hover{
+    background: url("../imges/login/password-field-hover.png") center left no-repeat;
+}
+input[type="text"],input[type="password"]{
+    width:120px;
+    height:16px;
+    margin-top:10px;
+    margin-left:10px;
+    font-family: Verdana,Arial;
+    font-size: 16px;
+    color: #2d2d2d;
+}
+/*------custom checkbox------------*/
+input[type="checkbox"]{
+    position: absolute;
+    left: -999px;
+}
+input[type="checkbox"]+label{
+    width:132px;
+    height:24px;
+    float: left;
+    margin-top:26px;
+    margin-left:37px;
+    padding-left: 28px;
+    display: block;
+    position: relative;
+    line-height: 24px;
+    background: url("../imges/login/checkbox-off.png")top left no-repeat;
+}
+input[type="checkbox"]:checked+label{
+    background: url("../imges/login/checkbox-on.png")top left no-repeat;
+}
+input[type="checkbox"]:checked:hover+label,input[type="checkbox"]:checked:focus+label{
+    background: url("../imges/login/checkbox-on-hover.png") top left no-repeat;
+}
+input[type="checkbox"]:not(:checked):hover+label,input[type="checkbox"]:not(:checked):focus+label{
+    background: url("../imges/login/checkbox-off-hover.png") top left no-repeat;
+}
+/*----------------------------------------------------------*/
+.forget-user-pwd{
+    width: 220px;
+    float: left;
+    margin-top:26px;
+    margin-left:0;
+    color: #cccccc;
+    line-height: 24px;
+}
+.forget-user-pwd a{
+    color: #a05555;
+    text-decoration: underline;
+    font-style: italic;
+}
+.forget-user-pwd a:hover,.forget-user-pwd a:focus{
+    text-decoration: underline;
+}
+input[type="button"]{
+    width:95px;
+    height:73px;
+    float: left;
+    margin-top:12px;
+    margin-left:2px;
+    font-family: Verdana,Arial;
+    font-size: 26px;
+    color:#ffffff;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    background: url("../imges/login/go-hover.png") top left no-repeat;
+}

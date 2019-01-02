@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/changePwd.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/changePwd.js"></script>
+	<title>changePwd</title>
+</head>
+<body>
+<div class="wrap">
+	<!-- 导航栏 -->
+	<div class="head">
+        <div id="logo">
+            <img src="imges/logo-mini.png">
+        </div>
+        <div id="nav">
+            <div id="nav1" title="农场概况" class="nav-ico" onclick="javascript:location.href='index.html' ">
+                <img src="imges/head/nav11.png" onmouseover="this.src='imges/head/nav1.png';"
+                     onmouseout="this.src='imges/head/nav11.png';">
+            </div>
+            <div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+                <img src="imges/head/nav22.png" onmouseover="this.src='imges/head/nav2.png';"
+                     onmouseout="this.src='imges/head/nav22.png';">
+            </div>
+            <div id="nav3" title="视频监控" class="nav-ico">
+                <img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';"
+                     onmouseout="this.src='imges/head/nav33.png';">
+            </div>
+            <div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+                <img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';"
+                     onmouseout="this.src='imges/head/nav44.png';">
+            </div>
+            <div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='History.html' ">
+                <img src="imges/head/nav55.png" onmouseover="this.src='imges/head/nav5.png';"
+                     onmouseout="this.src='imges/head/nav55.png';">
+            </div>
+            <div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+                <img src="imges/head/nav66.png" onmouseover="this.src='imges/head/nav6.png';"
+                     onmouseout="this.src='imges/head/nav66.png';">
+            </div>
+            <div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+                <img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';"
+                     onmouseout="this.src='imges/head/nav77.png';">
+            </div>
+            <div id="nav8" title="关于" class="nav-ico">
+                <img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';"
+                     onmouseout="this.src='imges/head/nav88.png';">
+            </div>
+        </div>
+        <div id="user" title="账户">
+            <img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';"
+                 onmouseout="this.src='imges/head/nav99.png';">
+                 <div id="accountForm">
+                        <img src="imges/u122.png" alt="">
+                        <p>
+                            <a href="userInfo.html" id="ownInfo">个人信息</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a href="login.html" id="logOff">注销</a>
+                        </p>
+                    </div>
+                    <script>
+                        $("#user").click(function () {
+                            $("#accountForm").show();
+                        })
+                        $("#accountForm").mouseleave(function () {
+                            $("#accountForm").hide();
+                        })
+                    </script>
+        </div>
+        <hr id="hr">
+    </div>
+	<!-- 内容部分 -->
+    <div class="content">
+        <div class="changePwdBefore">
+    		<h4>修改密码</h4>
+            <div class="divSection">
+                <div>
+                    <label for="">原密码:</label>
+                    <input id="oldPwd" type="text" placeholder="请输入原密码">
+                </div>
+                <div>
+                    <label for="">新密码:</label>
+                    <input id="newPwd" type="text" placeholder="请输入新密码">
+                    <p>(最低8位,且必须包含字母和数字)</p>
+                </div>
+                <div>
+                    <label for="">确认密码:</label>
+                    <input type="text" placeholder="请再次输入新密码">
+                </div>
+                <button id="next">下一步</button>
+            </div> 
+        </div>
+        <div class="changePwdAfter">
+            <img src="imges/changePwdSuccess.png" alt="">
+            <div>
+                <p>恭喜&nbsp;,&nbsp;操作成功</p>
+                <p>您的新密码已经设置成功&nbsp;,&nbsp;请牢记。</p>
+            </div>
+            <button id="loginTest">马上登录试试</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#MB-content{
+    position: fixed;
+    transform:translate(0,0);
+    width: 570px;
+    height:344px;
+    left:355px;
+    top:126px;
+    border:1px solid  #797979;
+    border-radius: 4px;
+    background: #F7F8FA;
+    
+}
+.MB-title:nth-child(1){
+   position: fixed;
+   left:207px;
+   top:40px;
+   font-size: 13px;
+   color:#333333;
+}
+#MB-img img{
+    position: fixed;
+    width:110px;
+    height:110px;
+    left:230px;
+    top:76px;
+}
+.MB-title:nth-child(3){
+    position: fixed;
+    left:233px;
+    top:233px;
+    font-size: 13px;
+    color:#333333;
+ }
+#MB-submit{
+   position: fixed;
+   width:100px;
+   height:40px;
+   left:235px;
+   top:267px;
+   outline: none;
+   border:none;
+   font-size: 14px;
+   font-weight: bold;
+   color:#ffffff;
+   border-radius:4px;
+   background: #0099FF;
+   cursor: pointer;
+}
+#MB-submit:hover{  margin-top: 1px;  }
+#appIcon
+{
+    position: fixed;
+    width:97px;
+    height:75px;
+    right:0;
+    bottom:0;
+}
+#footer{
+    width:1330px;
+    position:absolute;
+    bottom:0;
+    text-align: center;}

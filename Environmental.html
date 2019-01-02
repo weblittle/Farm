@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>datamonitor</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/Environmental.css">
+	<script src=js/jquery-1.7.2.min.js></script>
+	<script src="js/echarts.common.min.js"></script>
+	<script src="js/Envir.js"></script>
+</head>
+
+<body>
+	<div class='wrap'>
+		<!-- 头部 -->
+		<div class="head">
+			<div id="logo">
+				<img src="imges/logo-mini.png">
+			</div>
+			<div id="nav">
+				<div id="nav1" title="农场概况" class="nav-ico">
+					<img src="imges/head/nav11.png" onclick="javascript:location.href='index.html' " onmouseover="this.src='imges/head/nav1.png';"
+					 onmouseout="this.src='imges/head/nav11.png';">
+				</div>
+				<div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+					<img src="imges/head/nav2.png" onmouseover="this.src='imges/head/nav22.png';" onmouseout="this.src='imges/head/nav2.png';">
+				</div>
+				<div id="nav3" title="视频监控" class="nav-ico">
+					<img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';" onmouseout="this.src='imges/head/nav33.png';">
+				</div>
+				<div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+					<img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';" onmouseout="this.src='imges/head/nav44.png';">
+				</div>
+				<div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='History.html' ">
+					<img src="imges/head/nav55.png" onmouseover="this.src='imges/head/nav5.png';" onmouseout="this.src='imges/head/nav55.png';">
+				</div>
+				<div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+					<img src="imges/head/nav66.png" onmouseover="this.src='imges/head/nav6.png';" onmouseout="this.src='imges/head/nav66.png';">
+				</div>
+				<div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+					<img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';" onmouseout="this.src='imges/head/nav77.png';">
+				</div>
+				<div id="nav8" title="关于" class="nav-ico">
+					<img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';" onmouseout="this.src='imges/head/nav88.png';">
+				</div>
+			</div>
+			<div id="user" title="账户">
+				<img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';" onmouseout="this.src='imges/head/nav99.png';">
+				<div id="accountForm">
+						<img src="imges/u122.png" alt="">
+						<p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+						<hr>
+						<p><a href="login.html" id="logOff">注销</a></p>
+					</div>
+					<script>
+						$("#user").click(function(){
+							$("#accountForm").show();
+						})
+						$("#accountForm").mouseleave(function(){
+							$("#accountForm").hide();
+						})
+					</script>
+			</div>
+			<hr id="hr">
+		</div>
+		<!-- 主体内容 -->
+		<!-- 左侧 -->
+		<div class="env-content-left">
+			<ul>
+				<li>
+					<span class="span1">当前位置 :</span>
+					<select name="" id="dapengSelect">
+					</select>
+				</li>
+				<li>
+					<span class="span1">种植种类 :</span>
+					<span id="plantType" class="span2"></span>
+				</li>
+				<li>
+					<span class="span1">种植时间 :</span>
+					<span id="plantTime" class="span2"></span>
+				</li>
+				<li>
+					<span class="span1">收获时间 :</span>
+					<span id="gainTime" class="span2"></span>
+				</li>
+				<li>
+					<span class="span1">适宜温度 :</span>
+					<span id="tempRange" class="span2"></span>
+				</li>
+				<li>
+					<span class="span1">适宜湿度 :</span>
+					<span id="moistRange" class="span2"></span>
+				</li>
+				<li>
+					<span class="span1">管理员 :</span>
+					<span id="manager">
+						<a href="" style="text-decoration: underline;font-size: 14px;color:#0066ff"></a>
+					</span>
+				</li>
+			</ul>
+			<div class="cropImg">
+				<img src="" alt="作物图片">
+			</div>
+		</div>
+		<!-- 右上 -->
+		<div class="env-content-right-top">
+			<ul id="EnvironmentalState">
+			</ul>
+			<img id="img-left" src="imges/left.jpg" alt="">
+			<img id="img-right" src="imges/right.jpg" alt="">
+		</div>
+		<!-- 右下折线图区域 -->
+		<div class="env-content-right-bottom-left">
+			<div id="linewrap" style="width:790px;height:302px;"></div>
+			<!-- 显示折线图区域 -->
+		</div>
+	</div>
+	<!-- 右下开关区域 -->
+	<div class="env-content-right-bottom-right">
+		<ul>
+			<li>
+				<img src="imges/nuanfengji-open.png" alt="">
+				<span>暖风机</span>
+				<p class="switch-open" onclick="Switch(this);">
+					<span class="open-green">开</span>
+					<span class="open-gray"></span>
+				</p>
+			</li>
+			<li>
+				<img src="imges/shuibeng-close.png" alt="">
+				<span>滴灌水泵</span>
+				<p class="switch-close" onclick="Switch(this);">
+					<span class="close-bold-gray">关</span>
+					<span class="close-gray"></span>
+				</p>
+			</li>
+			<li>
+				<img src="imges/xunhuanfengji-open.png" alt="循环风机">
+				<span>循环风机</span>
+				<p class="switch-open" onclick="Switch(this);">
+					<span class="open-green">开</span>
+					<span class="open-gray"></span>
+				</p>
+			</li>
+			<li>
+				<img src="imges/neibaowen-open.png" alt="内保温">
+				<span>内保温</span>
+				<p class="switch-open" onclick="Switch(this);">
+					<span class="open-green">开</span>
+					<span class="open-gray"></span>
+				</p>
+			</li>
+			<li>
+				<img src="imges/buguang-close.png" alt="补光灯">
+				<span>补光</span>
+				<p class="switch-close" onclick="Switch(this);">
+					<span class="close-bold-gray">关</span>
+					<span class="close-gray"></span>
+				</p>
+			</li>
+		</ul>
+	</div>
+	<!-- 页脚 -->
+	<div id="footer">
+		<p>
+			<p id="info">
+				版权所有
+				<span class="fuhao">©&nbsp;2017</span>
+				<a href="http://www.miit.gov.cn/">河南理工大学计算机科学与技术学院物联网系</a>
+			</p>
+			<p id="copyRights">豫
+				<span class="fuhao">ICP</span>备
+				<span class="fuhao">17014461</span>号
+			</p>
+		</p>
+	</div>
+	</div>
+</body>
+
+</html>

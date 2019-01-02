@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>智能农业大棚</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <div class="login">登录</div>
+            <div class="username-text">用户名：</div>
+            <div class="password-text">密码:</div>
+            <div class="username-field">
+                <input type="text" name="username" placeholder="请输入用户名" >
+            </div>
+            <div class="password-field">
+                <input type="password" name="password" placeholder="请输入密码">
+            </div>
+            <input type="checkbox" id="remember-me" name="remember-me"><label for="remember-me">记住用户名</label>
+            <div class="forget-user-pwd">忘记<a href="">用户名</a>或者<a href="">密码</a>？</div>
+            <input type="button" id="login" value="登录" onclick="confirm()">
+            <div class="go" onclick="confirm()"></div>
+        </form>
+    </div>
+</body>
+</html>

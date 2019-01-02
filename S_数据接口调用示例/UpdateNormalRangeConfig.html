@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div style="width: 400px;height: 400px;">
+        <p>GreenHouseID:</p><input type="text" id="int1" value="House1">
+        <p>NameID:</p><input type="text" id="int2" value="1">
+        <p>MaxValue:</p><input type="text" id="int3" value="30" >
+        <p>MinValue:</p><input type="text" id="int4" value="10">
+        <p>UserID:</p><input type="text" id="int5" value="10001">
+
+        <input type="button" id="btn" name="" value="提交">
+        <div id="view" style="width: 1280px;height: 600px;  "></div>
+        <script>
+            var aInput1= document.getElementById('int1');
+            var aInput2= document.getElementById('int2');
+            var aInput3 = document.getElementById('int3');
+            var aInput4 = document.getElementById('int4');
+            var aInput5 = document.getElementById('int5');
+
+            var oBtn= document.getElementById('btn');
+                      
+            var View =document.getElementById('view');    
+            
+            oBtn.onclick= function(){
+                var data = {
+                    GreenHouseID: aInput1.value,
+                    NameID: aInput2.value,
+                    MaxValue: aInput3.value,
+                    MinValue: aInput4.value,
+                    UserID: aInput5.value,
+                };
+                var msg = JSON.stringify(data);
+                ajax('post', "http://211.149.245.105:8866/MonitorService.svc/webHttp/UpdateNormalRangeConfig", msg, function (result) {
+                    
+                    
+                    var obj = JSON.parse(result);
+                    console.log(obj);
+                    
+                    //var otg = JSON.parse(obj.UpdateSwitchStateNowResult);
+                    //View.innerHTML = JSON.stringify(obj);
+                })
+            };
+            function ajax(method, url, data, success) {
+                var xhr = null;
+                try {
+                    xhr = new XMLHttpRequest();
+                } catch (e) {
+                    xhr = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                if (method == 'get' && data) {
+                    url += '?' + data;
+                }
+                xhr.open(method, url, true);
+                if (method == 'get') {
+                    xhr.send();
+                } else {
+                    // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+                    xhr.setRequestHeader('content-type', 'application/json;charset=utf-8');
+                    
+                    xhr.send(data);
+                }
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            success && success(xhr.responseText);
+                        } else {
+                            alert('出错了，Err:' + xhr.status);
+                        }
+                    }
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

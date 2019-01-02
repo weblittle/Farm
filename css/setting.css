@@ -1,0 +1,2477 @@
+@font-face{
+	font-family: 'MyNewFont';/* 字体名称 */
+	src:url('../fonts/fontawesome-webfont.woff');/* 字体源文件 */
+	src:url('../fonts/fontawesome-webfont.woff2');
+}
+/* 头部水平线样式 */
+hr{
+	margin-top:0;
+    margin-bottom:0;
+    border-top:1px solid #999999;
+    left:0;
+    top:53px;
+}
+/* 设置页面的主体内容样式 */
+.content{
+	position: relative;
+	left:0px;
+	top:86px;
+	width:100%;
+	height:100%;
+}
+/* 功能标签 */
+#content-list{
+	position:absolute;
+	left:216px;
+	top:0px;
+	height:30px;
+}
+#content-list p{
+	position: absolute;
+	z-index:2;
+	width:200px;
+	height:30px;
+	font-size: 13px;
+	color:#000000;
+	display: inline-block;
+	text-align: center;
+	background-image: url("../imges/setting/no_active.png");
+	margin-top:0;
+	
+}
+#content-list p span
+{
+	display: inline-block;
+	margin-top:6.5px;
+}
+/* 用户管理标签 */
+#content-list #user-manage
+{
+	left:0;
+	top:0;
+}
+/* 设备管理标签 */
+#content-list #equip-manage
+{
+	left:240px;
+	top:0px;
+}
+/* 大棚信息标签 */
+#content-list #dapeng-info
+{
+	left:480px;
+	top:0px;
+}
+/* 当前选中标签 */
+#content-list .active{
+	color:#000000;
+	background-image: url("../imges/setting/active.png");
+}
+#content-list .active:hover{
+	color:#ffffff;
+	background-image: url("../imges/setting/no_active.png");
+}
+/* 未选中标签 */
+#content-list p:not(.active){
+	color:#ffffff;
+	background-image: url("../imges/setting/no_active.png");
+}
+#content-list p:not(.active):hover{
+	color:#000000;
+	background-image: url("../imges/setting/active.png");
+}
+/* 容器矩形 */
+#content-show{
+	width:920px;
+	height:538px;
+	position: absolute;
+	z-index:1;
+	opacity:0.8;
+	left:176px;
+	top:29px;
+	background-image: url("../imges/setting/u45.png");
+}
+
+/* 用户管理 */
+/* 大棚名称下拉列表 */
+#user-select-farm
+{
+	position: absolute;
+	left:70px;
+	top:47px;
+	width:84px;
+	height:21px;
+	font-size:12px;
+	color:#000000;
+}
+/* 文字“的用户信息” */
+#userInfoText
+{
+	position: absolute;
+	left:164px;
+	top:49px;
+	font-family:"微软雅黑";
+	font-size:12px;
+	color:#333333;
+}
+/* 注册新用户按钮 */
+#btn-log
+{
+	position: absolute;
+	left:660px;
+	top:41px;
+	width:80px;
+	height:32px;
+	outline: none;
+	border:none;
+	border-radius:5px;
+	background-color:#00CC00;
+	font-family: 'Microsoft YaHei Bold', 'Microsoft YaHei';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+	color: #ffffff;
+	cursor: pointer;
+}
+#btn-log:hover{
+	background: #009900;
+}
+/* 添加新用户按钮 */
+#btn-add
+{
+	position: absolute;
+	left:782px;
+	top:41px;
+	width:80px;
+	height:32px;
+	outline: none;
+	border:none;
+	border-radius:5px;
+	background:#0099FF;
+	font-family: 'Microsoft YaHei Bold', 'Microsoft YaHei';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+	color: #ffffff;
+	cursor: pointer;
+}
+#btn-add:hover{
+	background: #00CCFF;
+}
+/* 用户管理的表格样式 */
+.user-manage{
+	position: absolute;
+	width:810px;
+	height:360px;
+	left:70px;
+	top:106px;
+	overflow-y: scroll;
+}
+.user-manage table{
+	position: absolute;
+	width:792px;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+/* 表格操作列 */
+#table tr td:nth-child(6)
+{
+	position:relative;
+}
+/* 表格头部样式 */
+.user-manage table tr th{
+	background: #999999;
+	font-size: 13px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+.user-manage table tr td
+{
+	background: #F2F2F2;
+	color:#000000;
+}
+/* 每行高度 */
+#table tr{
+	height:40px;
+}
+/* 序号列宽度 */
+.orderNumCol
+{
+	width:41px;
+}
+/* 大棚号列宽度 */
+.farmNumCol
+{
+	width:135px;
+}
+/* 用户姓名列宽度 */
+.userNameCol
+{
+	width:122px;
+}
+/* 用户类型列宽度 */
+.userTypeCol
+{
+	width:88px;
+}
+/* 手机号列宽度 */
+.phoneNumCol
+{
+	width:169px;
+}
+/* 操作列宽度 */
+.operateCol
+{
+	width:237px;
+}
+/* 编辑按钮 */
+.text-edit{
+	position:absolute;
+	width:48px;
+	height:20px;
+	left:57px;
+	top:10px;
+	outline: none;
+	border:1px solid #999999;
+	border-radius: 4px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666;
+	cursor: pointer;
+}
+/* 删除按钮 */
+.text-delete
+{
+	position:absolute;
+	width:48px;
+	height:20px;
+	left:137px;
+	top:10px;
+	outline: none;
+	border:1px solid #999999;
+	border-radius: 4px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#ff0000;
+	cursor: pointer;
+}
+/* 个人信息编辑页面 */
+/* 背景矩形 */
+#edit
+{
+	position: fixed;
+	transform: translate(0,0);
+	z-index: 3;
+	width:718px;
+	height:640px;
+	left:289px;
+	top:10px;
+	border:1px solid #797979;
+	border-radius:5px;
+	background-color:#F7F7F7;  
+	display: none;
+}
+/* 关闭图标 */
+#edit .edit-close
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:678px;
+	top:8px;
+}
+/* 文字“个人信息” */
+#edit .ownInfo
+{
+	position: fixed;
+	left:320px;
+	top:19px;
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 16px;
+	color:#333333;
+}
+/* 用户头像 */
+/* 相框 */
+#edit .userImg
+{
+	position: fixed;
+	width:120px;
+	height:140px;
+	left:100px;
+	top:61px;
+	border:1px solid #797979;
+	text-align: center;
+	background: #ffffff;
+}
+/* 相片 */
+#edit .userImg #userImage
+{
+	position:fixed;
+	left:105px;
+	top:81px;
+	width:110px;
+	height:110px;
+	
+}
+/* 姓名文字 */
+#edit .nameText
+{
+	position: fixed;
+	left:100px;
+	top:219px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 姓名值 */
+#edit #name
+{
+	position: fixed;
+	left:140px;
+	top:219px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 性别文字 */
+#edit .genderText
+{
+	position:fixed;
+	left:100px;
+	top:260px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 性别值 */
+#edit #gender
+{
+	position: fixed;
+	left:140px;
+	top:260px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户名文字 */
+#edit .user-key:nth-child(1) .key
+{
+	position: fixed;
+	left:270px;
+	top:70px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户名值 */
+#edit .user-key:nth-child(1) .value
+{
+	position: fixed;
+	left:337px;
+	top:70px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 手机号文字 */
+#edit .user-key:nth-child(2) .key
+{
+	position: fixed;
+	left:270px;
+	top:120px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 手机号文本框 */
+#edit .user-key:nth-child(2) #phoneNum
+{
+	position: fixed;
+	width: 133px;
+	height:25px;
+	left:337px;
+	top:117px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* “*”号 */
+#edit .user-key:nth-child(2) .star
+{
+	position:fixed;
+	left:474px;
+	top:120px;
+	color:#ff0000;
+}
+/* 注释信息 */
+#edit .user-key:nth-child(2) .tip
+{
+	position: fixed;
+	left:489px;
+	top:120px;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	color:#333333;
+}
+/* 身份证号 */
+#edit .user-key:nth-child(3) .key
+{
+	position:fixed;
+	left:270px;
+	top:169px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 身份证具体号码 */
+#edit .user-key:nth-child(3) #idCard
+{
+	position: fixed;
+	left:336px;
+	top:171px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户类型 */
+#edit .user-key:nth-child(4) .key
+{
+	position: fixed;
+	left:270px;
+	top:219px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户类型下拉列表 */
+#edit .user-key:nth-child(4) .user-type
+{
+	position: fixed;
+	left:337px;
+	top:218px;
+	width:88px;
+	height:22px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 水平线 */
+#edit .fengeUserEdit
+{
+	position: fixed;
+	left:0;
+	top:303px;
+	width:718px;
+	height:1px;
+	color:#CCCCCC;
+}
+/* 该用户新增负责的大棚 */
+#edit .bottom-content .div:nth-child(1) span
+{
+	position: fixed;
+	left:200px;
+	top:339px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 大棚号列表 */
+#edit .bottom-content .div:nth-child(1) .newfarm
+{
+	position:fixed;
+	left:348px;
+	top:338px;
+	width:103px;
+	height:22px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 添加按钮 */
+#edit .bottom-content .div:nth-child(1) .btnAdd
+{
+	position: fixed;
+	width:77px;
+	height:25px;
+	left:469px;
+	top:337px;
+	outline: none;
+	border:1px solid #A5A5A5;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	background: #E9E9E9;
+	cursor: pointer;
+}
+/* 该用户已负责大棚列表文字*/
+#edit .bottom-content .div:nth-child(2)
+{
+	position: fixed;
+	left:200px;
+	top:373px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 已负责大棚列表 */
+/* 外边框 */
+#edit #havefarm-list
+{
+	position: fixed;
+	left:191px;
+	top:401px;
+	width:359px;
+	height:159px;
+	border:1px solid #CCCCCC;
+	border-radius:5px;
+	overflow-y: scroll;
+}
+/* 表格 */
+#edit #havefarm-list table
+{
+	width:329px;
+	height:30px;
+	text-align: center;
+	margin:10px auto;
+}
+/* 删除文本 */
+#havefarm-list .deleteText{
+	font-size: 13px;
+	color:#0099FF;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* 更新按钮 */
+#edit .update
+{
+	position: fixed;
+	left:228px;
+	top:582px;
+	width:80px;
+	height:30px;
+	outline: none;
+	border:1px solid #A5A5A5;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	background: #E9E9E9;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#edit .cancel
+{
+	position: fixed;
+	left:436px;
+	top:582px;
+	width:80px;
+	height:30px;
+	outline: none;
+	border:1px solid #A5A5A5;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	background: #E9E9E9;
+	cursor: pointer;
+}
+/* 删除用户确认对话框 */
+/* 背景矩形 */
+#userManage-deleteForm
+{
+	position: fixed;
+	transform: translate(0,0);
+	z-index: 3;
+	width:448px;
+	height:258px;
+	left:422px;
+	top:198px;
+	border:1px solid #cccccc;
+	border-radius: 5px;
+	background:#F2F2F2;
+	box-shadow:5px 5px 5px #A8A8A8 ;
+	display: none;
+}
+/* 关闭窗口图标 */
+#userManage-deleteForm #closeIcon
+{
+	position: fixed;
+	left:417px;
+	top:7px;
+	width:25px;
+	height:25px;
+}
+/* 叹号图标 */
+#userManage-deleteForm #warnIcon
+{
+	position: fixed;
+	width:78px;
+	height:78px;
+	left:32px;
+	top:44px;
+}
+/* 警告信息 */
+#userManage-deleteForm .warnInfo span:nth-child(1)
+{
+	position: fixed;
+	left:128px;
+	top:66px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+#userManage-deleteForm .warnInfo span:nth-child(3)
+{
+	position: fixed;
+	left:128px;
+	top:100px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 确定按钮 */
+#userManage-deleteForm #deleteSure
+{
+	position: fixed;
+	left:122px;
+	top:179px;
+	width:80px;
+	height:30px;
+	border: 1px solid #A5A5A5;
+	background: #EAEAEA;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#userManage-deleteForm #deleteCancle
+{
+	position: fixed;
+	left:268px;
+	top:179px;
+	width:80px;
+	height:30px;
+	border: 1px solid #A5A5A5;
+	background: #EAEAEA;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+/* 注册新用户面板 */
+/* 背影矩形 */
+#reg-new-user
+{
+	position:fixed;
+	transform: translate(0,0);
+	z-index: 3;
+	width:570px;
+	height:424px;
+	left:360px;
+	top:86px;
+	border:1px solid #888;
+	background-color:#F7F7F7; 
+	font-family:'微软雅黑';
+	display: none;
+}
+/* 关闭窗口图标 */
+#reg-new-user .log-close{
+	position:fixed;
+	left:530px;
+	top:8px;
+	width:32px;
+	height:32px;
+}
+/* 文字 "个人信息" */
+#reg-new-user .ownInfo
+{
+	position: fixed;
+	left:237px;
+	top:19px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color:#333333;
+}
+/* 用户头像 */
+/* 相框 */
+#reg-new-user .log-manPic
+{
+	position: fixed;
+	width:120px;
+	height:140px;
+	left:17px;
+	top:61px;
+	border:1px solid #797979;
+	background: #ffffff;
+}
+/* 相片 */
+#reg-new-user .log-manPic img
+{
+	position: fixed;
+	width:110px;
+	height:110px;
+	left:24px;
+	top:81px;
+}
+/* 姓名 */
+#reg-new-user .log-text #name
+{
+	position: fixed;
+	left:17px;
+	top:219px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 姓名文本框 */
+#reg-new-user .log-text #nameInput
+{
+	position: fixed;
+	width:79px;
+	height:25px;
+	left:58px;
+	top:215px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* *号 */
+#reg-new-user .log-text span
+{
+	position: fixed;
+	left:141px;
+	top:221px;
+	font-size: 14px;
+	color:#ff0000;
+}
+/* 性别 */
+#reg-new-user .log-text #sex
+{
+	position: fixed;
+	left:17px;
+	top:260px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 性别下拉列表 */
+#reg-new-user .log-text #sexSelect
+{
+	position: fixed;
+	width:49px;
+	height:22px;
+	left:58px;
+	top:258px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 用户名 */
+#reg-new-user .log-user-key:nth-child(1) .log-key
+{
+	position: fixed;
+	left:187px;
+	top:66px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户名文本框 */
+#reg-new-user .log-user-key:nth-child(1) #inputUserName
+{
+	position: fixed;
+	left:254px;
+	top:61px;
+	width:88px;
+	height:25px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* *号 */
+#reg-new-user .log-user-key:nth-child(1) .log-star
+{
+	position: fixed;
+	left:345px;
+	top:67px;
+	color:#ff0000;
+	font-size: 14px;
+}
+/* 注释文字 */
+#reg-new-user .log-user-key:nth-child(1) .log-tip
+{
+	position:fixed;
+	left:357px;
+	top:66px;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	color:#333333;
+}
+/* 密码 */
+#reg-new-user .log-user-key:nth-child(2) .log-key
+{
+	position: fixed;
+	left:187px;
+	top:115px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 密码文本框 */
+#reg-new-user .log-user-key:nth-child(2) #pwd
+{
+	position: fixed;
+	width:88px;
+	height:25px;
+	left:254px;
+	top:110px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* *号 */
+#reg-new-user .log-user-key:nth-child(2) .log-star
+{
+	position: fixed;
+	left:345px;
+	top:115px;
+	color:#ff0000;
+	font-size: 14px;
+}
+/* 手机号 */
+#reg-new-user .log-user-key:nth-child(3) .log-key
+{
+	position: fixed;
+	left:187px;
+	top:163px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 手机号文本框 */
+#reg-new-user .log-user-key:nth-child(3) #phoneNum
+{
+	position: fixed;
+	width:88px;
+	height:25px;
+	left:254px;
+	top:159px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* *号 */
+#reg-new-user .log-user-key:nth-child(3) .log-star
+{
+	position: fixed;
+	left:345px;
+	top:163px;
+	color:#ff0000;
+	font-size: 14px;
+}
+/* 注释文字 */
+#reg-new-user .log-user-key:nth-child(3) .log-tip
+{
+	position:fixed;
+	left:357px;
+	top:161px;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	color:#333333;
+}
+/* 身份证号 */
+#reg-new-user .log-user-key:nth-child(4) .log-key
+{
+	position: fixed;
+	left:187px;
+	top:212px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 身份证号文本框 */
+#reg-new-user .log-user-key:nth-child(4) #inputCard
+{
+	position: fixed;
+	left:254px;
+	top:209px;
+	width:133px;
+	height:25px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* *号 */
+#reg-new-user .log-user-key:nth-child(4) .log-star
+{
+	position: fixed;
+	left:391px;
+	top:211px;
+	font-size: 14px;
+	color:#ff0000;
+}
+/* 用户类型 */
+#reg-new-user .log-user-key:nth-child(5) .log-key
+{
+	position: fixed;
+	left:187px;
+	top:260px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 用户类型下拉列表 */
+#reg-new-user .log-user-key:nth-child(5) #selectUserType
+{
+	position: fixed;
+	left:254px;
+	top:258px;
+	width:88px;
+	height:22px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 确定按钮 */
+#reg-new-user .log-sure
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:145px;
+	top:345px;
+	border: 1px solid #A5A5A5;
+	background: #EAEAEA;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#reg-new-user .log-cancel
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:353px;
+	top:345px;
+	border: 1px solid #A5A5A5;
+	background: #EAEAEA;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+/* 添加新用户面板 */
+/* 背影矩形 */
+#add-new-user
+{
+	position: fixed;
+	transform: translate(0,0);
+	z-index: 3;
+	width:480px;
+	height:390px;
+	left:396px;
+	top:136px;
+	border:1px solid #797979;
+	border-radius: 5px;
+	background:#ffffff;
+	display: none;
+}
+/*关闭添加新用户窗口图标*/
+#add-new-user .log-close
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:442px;
+	top:6px;
+}
+/* 添加用户到大棚 */
+#add-new-user #title
+{
+	position: fixed;
+	left:45px;
+	top:36px;
+	font-family:"微软雅黑";
+	font-size: 16px;
+	color:#333333;
+	
+}
+/* 姓名 */
+#add-new-user #name label
+{
+	position: fixed;
+	left:45px;
+	top:94px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 姓名文本框 */
+#add-new-user #name input
+{
+	position: fixed;
+	left:105px;
+	top:90px;
+	height:25px;
+	width:75px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/*手机号*/
+#add-new-user #phone label
+{
+	position: fixed;
+	left:45px;
+	top:139px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 手机号文本框 */
+#add-new-user #phone input
+{
+	position: fixed;
+	left:105px;
+	top:135px;
+	width:118px;
+	height:25px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#0000004b;
+}
+/* 搜索按钮 */
+#add-new-user #phone #search
+{
+	position: fixed;
+	width:60px;
+	height:25px;
+	left:270px;
+	top:135px;
+	border:1px solid #979797;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 右上角图片 */
+#add-new-user>img
+{
+	position: absolute;
+	width:84px;
+	height:84px;
+	left:366px;
+	top:27px;
+}
+/* 搜索结果列表 */
+#add-new-user #searchResultTable
+{
+	position: fixed;
+	width:452px;
+	left:14px;
+	top:196px;
+}
+/* 设置第一行背景 */
+#add-new-user #searchResultTable tr#tableHead
+{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color:#ffffff;
+	font-size: 13px;
+	background:#999999;
+}
+/* 其他行背景 */
+#add-new-user #searchResultTable tr:not(tr#tableHead)
+{
+	font-family: "微软雅黑";
+	color:#333333;
+	font-size: 13px;
+	background:#f2f2f2;
+}
+/* 每行高度 */
+#add-new-user #searchResultTable tr
+{
+	height: 30px;
+}
+/* 序号列宽度 */
+#add-new-user #searchResultTable tr th:nth-child(1)
+{
+	width:42px;
+}
+/* 姓名列宽度 */
+#add-new-user #searchResultTable tr th:nth-child(2)
+{
+	width:84px;
+}
+/* 用户类型列宽度 */
+#add-new-user #searchResultTable tr th:nth-child(3)
+{
+	width:96px;
+}
+/* 手机号列宽度 */
+#add-new-user #searchResultTable tr th:nth-child(4)
+{
+	width:144px;
+}
+/* 操作列宽度 */
+#add-new-user #searchResultTable tr th:nth-child(5)
+{
+	width:86px;
+}
+/* 添加按钮 */
+#add-new-user #button #btn-add
+{
+	position: fixed;
+	width:60px;
+	height:25px;
+	left:150px;
+	top:345px;
+	border: 1px solid #A5A5A5;
+	border-radius:0;
+	background: #EAEAEA;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#add-new-user #btn-cancel
+{
+	position: fixed;
+	width:60px;
+	height:25px;
+	left:260px;
+	top:345px;
+	border: 1px solid #A5A5A5;
+	background: #EAEAEA;
+	font-size: 13px;
+	color:#333333;
+	cursor: pointer;
+}
+
+/* 设备管理 */
+
+#equip-manage-show
+{
+	display: none;
+}
+/* 大棚名称下拉列表 */
+#equip-select-farm
+{
+	position: absolute;
+	width:84px;
+	height:21px;
+	left:70px;
+	top:47px;
+	text-align: left;
+	font-size: 12px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 文字“的设备列表” */
+.equip-farm-list span
+{
+	position: absolute;
+	left:164px;
+	top:49px;
+	font-family:"微软雅黑";
+	font-size: 12px;
+	color:#333333;
+}
+/* 注册新设备按钮*/
+#btn-log-equip
+{
+	position: absolute;
+	width:80px;
+	height:32px;
+	left:781px;
+	top:41px;
+	outline: none;
+	border:none;
+	border-radius:4px;
+	background:#00cc00;
+	font-family:"微软雅黑";
+	font-size: 12px;
+	font-weight:bold;
+	color:#ffffff;
+	cursor: pointer;
+}
+#btn-log-equip:hover{
+	background: #009900;
+}
+/* 设备列表 */
+.equip-table-show
+{
+	position:relative;
+	width:810px;
+	height:400px;
+	left:70px;
+	top:106px;
+	overflow-y:scroll;
+}
+/* 设备表格 */
+.equip-table-show #equip-table1
+{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:792px;
+	text-align: center;
+}
+/* 表格头部字体 */
+#equip-table1 tr#equipTableHead
+{
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#ffffff;
+	font-weight:bold;
+	background: #999999;
+}
+#equip-table1 tr#equipTableHead th{
+	text-align: center;
+}
+/* 非头部行字体 */
+#equip-table1 tr:not(#equipTableHead)
+{
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 表格操作列 */
+#equip-table1 tr td:nth-child(8)
+{
+	position: relative;
+}
+/* 每行高度 */
+#equip-table1 tr
+{
+	height:40px;
+}
+/* 序号列宽度 */
+#equip-table1 tr th:nth-child(1)
+{
+	width:36px;
+}
+/* 大棚名称列宽度 */
+#equip-table1 tr th:nth-child(2)
+{
+	width:83px;
+}
+/* 控制柜编号列宽度 */
+#equip-table1 tr th:nth-child(3)
+{
+	width:83px;
+}
+/* 设备编号列宽度 */
+#equip-table1 tr th:nth-child(4)
+{
+	width:83px;
+}
+/* 设备类型列宽度 */
+#equip-table1 tr th:nth-child(5)
+{
+	width:83px;
+}
+/* 备注列宽度 */
+#equip-table1 tr th:nth-child(6)
+{
+	width:102px;
+}
+/* 设备状态列宽度 */
+#equip-table1 tr th:nth-child(7)
+{
+	width:64px;
+}
+/* 操作列宽度 */
+#equip-table1 tr th:nth-child(8)
+{
+	width:258px;
+}
+/* 停用按钮 */
+#equip-table1 .stopuse
+{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:33px;
+	top:12px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666666;
+	border:1px solid #9E9E9E;
+	border-radius:4px;
+	cursor: pointer;
+}
+/* 启用状态按钮 */
+#equip-table1 .startup
+{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:33px;
+	top:12px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#009900;
+	border:1px solid #9E9E9E;
+	border-radius:4px;
+	cursor: pointer;
+}
+/* 未分配设备编辑按钮 */
+#equip-table1 .UnassignDevice-text-edit
+{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:110px;
+	top:12px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666666;
+	border:1px solid #9E9E9E;
+	border-radius:4px;
+	cursor: pointer;
+}
+/* 未分配设备删除按钮 */
+#equip-table1 .text-delete{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:186px;
+	top:12px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#ff0000;
+	border:1px solid #9E9E9E;
+	border-radius:4px;
+	cursor: pointer;
+}
+/* 已分配设备编辑按钮 */
+#equip-table1 .AssignDevice-text-edit
+{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:110px;
+	top:12px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666666;
+	border:1px solid #9E9E9E;
+	border-radius:4px;
+	cursor: pointer;
+}
+/* 编辑设备信息面板 */
+#equip-table-edit
+{
+	position: fixed;
+	z-index: 3;
+	transform:translate(0,0);
+	width:660px;
+	height:520px;
+	left:306px;
+	top:86px;
+	border:1px solid #797979;
+	border-radius:5px;
+	background: #F3F3F3;
+	display: none;
+}
+/* 关闭窗口图标 */
+#equip-table-edit .equip-close
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:618px;
+	top:8px;
+}
+/* 文字“编辑设备信息” */
+#editForm-content p:nth-child(2)
+{
+	position: fixed;
+	left:290px;
+	top:20px;
+	font-family:"微软雅黑";
+	font-size: 16px;
+	color:#333333;
+	font-weight:bold;
+}
+/* 设备照片 */
+#equip-table-edit .top-left p
+{
+	position: fixed;
+	left:49px;
+	top:62px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 边框 */
+#equip-table-edit .picture
+{
+	position: fixed;
+	left:40px;
+	top:90px;
+	width:241px;
+	height:281px;
+	border:1px solid #797979;
+	background: #ffffff;
+}
+/* 相片 */
+#equip-table-edit .picture #deviceImage
+{
+	position: fixed;
+	left:60px;
+	top:140px;
+	width:200px;
+	height:200px;
+}
+/* 上传按钮 */
+#equip-table-edit .top-left button
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:120px;
+	top:381px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 设备归属 */
+#equip-table-edit .top-right div:nth-child(1) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:90px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备归属的大棚名字 */
+#equip-table-edit span#belongFarm
+{
+	position: fixed;
+	left:420px;
+	top:90px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备归属选择框 */
+#equip-table-edit select#belongFarm
+{
+	position: fixed;
+	left:420px;
+	top:88px;
+	width:120px;
+	height:22px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 控制柜编号 */
+#equip-table-edit .top-right div:nth-child(2) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:143px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 控制柜编号选择框 */
+#equip-table-edit .top-right div:nth-child(2) select#boxId
+{
+	position: fixed;
+	width:77px;
+	height:22px;
+	left:420px;
+	top:142px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 设备编号 */
+#equip-table-edit .top-right div:nth-child(3) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:195px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备编号值 */
+#equip-table-edit .top-right div:nth-child(3) #deviceId
+{
+	position: fixed;
+	left:420px;
+	top:197px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备类型 */
+#equip-table-edit .top-right div:nth-child(4) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:248px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备类型值 */
+#equip-table-edit .top-right div:nth-child(4) #deviceType
+{
+	position: fixed;
+	left:420px;
+	top:249px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 备注 */
+#equip-table-edit .top-right div:nth-child(5) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:300px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 备注值 */
+#equip-table-edit .top-right div:nth-child(5) #remark
+{
+	position: fixed;
+	left:420px;
+	top:300px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备状态 */
+#equip-table-edit .top-right div:nth-child(6) .spanText
+{
+	position: fixed;
+	left:341px;
+	top:353px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备状态值 */
+#equip-table-edit .top-right div:nth-child(6) #deviceState
+{
+	position: fixed;
+	left:420px;
+	top:352px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 更新按钮 */
+#equip-table-edit #updateForUnassignDevice
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:189px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#equip-table-edit .bottom button:nth-child(2)
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:397px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 注册新设备面板 */
+/* 背影矩形 */
+#reg-new-equip 
+{
+	position: fixed;
+	z-index: 3;
+	transform: translate(0,0);
+	width:660px;
+	height:520px;
+	left:306px;
+	top:86px;
+	border:1px solid #797979;
+	background: #F4F4F4;
+	display: none;
+	border-radius: 5px;
+}
+/* 关闭窗口图标 */
+#reg-new-equip .equip-reg-close
+{
+	position: fixed;
+	left:618px;
+	top:8px;
+	width:32px;
+	height:32px;
+}
+/* 新设备信息 */
+.equip-reg-head p:nth-child(2)
+{
+	position: fixed;
+	left:290px;
+	top:20px;
+	font-family:"微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color:#333333;
+}
+/* 设备照片 */
+#reg-new-equip .equip-reg-top-left p
+{
+	position: fixed;
+	left:49px;
+	top:62px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 相框 */
+#reg-new-equip .equip-regPic
+{
+	position: fixed;
+	width:241px;
+	height:281px;
+	left:40px;
+	top:90px;
+	border:1px solid #797979;
+}
+/* 照片 */
+#reg-new-equip .equip-regPic img
+{
+	position: fixed;
+	width: 223px;
+	height:223px;
+	left:49px;
+	top:118px;
+}
+/* 上传按钮 */
+.equip-reg-top-left button
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:120px;
+	top:381px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 设备类型 */
+.equip-reg-top-right div:nth-child(1) .equipSpan
+{
+	position: fixed;
+	left:341px;
+	top:92px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备类型下拉列表 */
+.equip-reg-top-right div:nth-child(1) #deviceTypeSelect
+{
+	position: fixed;
+	width:80px;
+	height:22px;
+	left: 420px;
+	top:90px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 备注 */
+.equip-reg-top-right div:nth-child(2) .equipSpan
+{
+	position: fixed;
+	left:341px;
+	top:155px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 备注值 */
+.equip-reg-top-right div:nth-child(2) input
+{
+	position: fixed;
+	width:160px;
+	height:25px;
+	left:420px;
+	top:152px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 设备归属 */
+.equip-reg-top-right div:nth-child(3) .equipSpan
+{
+	position: fixed;
+	left:341px;
+	top:219px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 设备归属下拉列表 */
+.equip-reg-top-right div:nth-child(3) #greenHouseSelect
+{
+	position: fixed;
+	width:80px;
+	height:22px;
+	left:420px;
+	top:218px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 控制柜编号 */
+.equip-reg-top-right div:nth-child(4) .equipSpan
+{
+	position: fixed;
+	left:341px;
+	top:282px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 控制柜编号下拉列表 */
+.equip-reg-top-right div:nth-child(4) #deviceBoxSelect
+{
+	position: fixed;
+	width:80px;
+	height:22px;
+	left:420px;
+	top:280px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 添加按钮 */
+#newEquipAdd
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:189px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 取消按钮 */
+.equip-reg-bottom button
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:397px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+	
+}
+/* 删除设备确认对话框 */
+#equipManage-deleteUnassignDevice,#equipManage-deleteForm
+{
+	position: fixed;
+	z-index: 3;
+	transform: translate(0,0);
+	left:399px;
+	top:221px;
+	width:468px;
+	height:258px;
+	border:1px solid #797979;
+	border-radius:5px;
+	background: #F2F2F2;
+	box-shadow:5px 5px 5px #99A09D;
+	display: none;
+}
+/* 关闭图标 */
+#equipManage-deleteUnassignDevice #closeIcon-unassign-equip,#equipManage-deleteForm #closeIcon-equip
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:428px;
+	top:7px;
+}
+/* 叹号图标 */
+#equipManage-deleteUnassignDevice img:nth-child(2),#equipManage-deleteForm img:nth-child(2)
+{
+	position: fixed;
+	width:78px;
+	height:78px;
+	left:32px;
+	top:44px;
+}
+/*未分配设备删除框警告信息第一行 */
+#equipManage-deleteUnassignDevice .warnInfo-equip span:nth-child(1)
+{
+	position: fixed;
+	left:128px;
+	top:48px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/*未分配设备删除框警告信息第二行 */
+#equipManage-deleteUnassignDevice .warnInfo-equip span:nth-child(3)
+{
+	position: fixed;
+	left:128px;
+	top:99px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/*已分配设备删除框警告信息第一行 */
+#equipManage-deleteForm .warnInfo-equip span:nth-child(1)
+{
+	position: fixed;
+	left:128px;
+	top:48px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/*已分配设备删除框警告信息第二行 */
+#equipManage-deleteForm .warnInfo-equip span:nth-child(3)
+{
+	position: fixed;
+	left:128px;
+	top:82px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 已分配设备的状态 */
+#equipManage-deleteForm .warnInfo-equip p:nth-child(4) span:nth-child(1)
+{
+	position: fixed;
+	left:128px;
+	top:132px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 已分配设备状态下拉列表 */
+#equipManage-deleteForm #deviceState
+{
+	position: fixed;
+	width:86px;
+	height:22px;
+	left:211px;
+	top:128px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+}
+/* 确定按钮 */
+#deleteUnassignDeviceSure,#deleteDeviceSure
+{
+	position: fixed;
+	left:122px;
+	top:179px;
+	width:80px;
+	height:30px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#deleteUnassignDeviceCancle,#deleteDeviceCancle
+{
+	position: fixed;
+	left:268px;
+	top:179px;
+	width:80px;
+	height:30px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 大棚信息 */
+/* 隐藏面板 */
+#dapeng-info-show
+{
+	display: none;
+}
+/* 注册新大棚按钮 */
+#dapeng-info-show #btn-log-farm
+{
+	position:absolute;
+	width:80px;
+	height:32px;
+	left:781px;
+	top:41px;
+	outline:none;
+	border:none;
+	border-radius:5px;
+	background: #00cc00;
+	font-family: 'Microsoft YaHei Bold', 'Microsoft YaHei';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#dapeng-info-show #btn-log-farm:hover
+{
+	background: #009900;
+}
+/* 大棚列表 */
+#existFarm
+{
+	position: absolute;
+	width:810px;
+	height:360px;
+	left:70px;
+	top:106px;
+	overflow-y: scroll;
+}
+/* 表格 */
+.dapeng-info-table
+{
+	position: absolute;
+	width:792px;
+	left:0;
+	top:0;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+}
+/* 表格的操作列*/
+.dapeng-info-table tr td:nth-child(6)
+{
+	position: relative;
+}
+/* 非标题行 */
+.dapeng-info-table tr:not(#tableHeadFarm){
+	color:#000000;
+}
+/* 标题行 */
+.dapeng-info-table #tableHeadFarm{
+	font-weight: bold;
+	color:#ffffff;
+	background: #999999;
+}
+.dapeng-info-table #tableHeadFarm th{
+	text-align: center;
+}
+/* 每行高度 */
+.dapeng-info-table tr
+{
+	height:40px;
+}
+/* 序号列宽度 */
+.dapeng-info-table tr th:nth-child(1)
+{
+	width:45px;
+}
+/* 大棚名称列宽度 */
+.dapeng-info-table tr th:nth-child(2)
+{
+	width:138px;
+}
+/* 种植种类列宽度 */
+.dapeng-info-table tr th:nth-child(3)
+{
+	width:145px;
+}
+/* 管理员姓名列 */
+.dapeng-info-table tr th:nth-child(4)
+{
+	width:83px;
+}
+/* 状态列宽度 */
+.dapeng-info-table tr th:nth-child(5)
+{
+	width:82px;
+}
+/* 操作列宽度 */
+.dapeng-info-table tr th:nth-child(6)
+{
+	width:235px;
+}
+/* 编辑按钮 */
+.dapeng-info-table .dapengInfo-text-edit
+{
+	position: absolute;
+	width:48px;
+	height:20px;
+	left:55px;
+	top:10px;
+	outline: none;
+	border:1px solid #999999;
+	border-radius: 4px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#666;
+	cursor: pointer;
+}
+/* 删除按钮 */
+.dapeng-info-table .text-delete
+{
+	position:absolute;
+	width:48px;
+	height:20px;
+	left:135px;
+	top:10px;
+	outline: none;
+	border:1px solid #999999;
+	border-radius: 4px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#ff0000;
+	cursor: pointer;
+}
+/* 编辑大棚信息面板和注册新大棚面板 */
+/* 背影矩形 */
+#dapeng-info-table-edit,#reg-new-farm
+{
+	position: fixed;
+	z-index: 3;
+	transform: translate(0,0);
+	width:660px;
+	height:520px;
+	left:268px;
+	top:86px;
+	border:1px solid #797979;
+	border-radius:5px;
+	background-color:#F7F7F7;  
+	display: none;
+}
+/* 关闭图标 */
+#dapeng-info-table-edit .dapeng-info-close,#reg-new-farm .dapeng-info-close
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:618px;
+	top:8px;
+}
+/* 文字“编辑大棚信息” */
+#dapeng-info-table-edit .table-edit-head p,#reg-new-farm .table-edit-head p
+{
+	position: absolute;
+	left:290px;
+	top:20px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color:#333333;
+}
+/* 文字“作物照片”*/
+#dapeng-info-table-edit .dapeng-info-top-left p,#reg-new-farm .dapeng-info-top-left p
+{
+	position: fixed;
+	left:49px;
+	top:62px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 照片框 */
+#dapeng-info-table-edit .dapeng-info-top-left .dapeng-infoPic,#reg-new-farm .dapeng-info-top-left .dapeng-infoPic
+{
+	position: fixed;
+	width:241px;
+	height:281px;
+	left:40px;
+	top:90px;
+	background: #ffffff;
+	border:1px solid #797979;
+}
+/* 照片 */
+#dapeng-info-table-edit .dapeng-info-top-left .dapeng-infoPic img,#reg-new-farm .dapeng-info-top-left .dapeng-infoPic img
+{
+	position: fixed;
+	width:130px;
+	height:130px;
+	left:96px;
+	top:166px;
+}
+/* 上传按钮 */
+#dapeng-info-table-edit .dapeng-info-top-left button,#reg-new-farm .dapeng-info-top-left button
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:120px;
+	top:381px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 大棚名称 */
+.dapeng-info-top-right div:nth-child(1) .dapeng-infoSpan
+{
+	position: fixed;
+	left:341px;
+	top:103px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 大棚名称文本框 */
+.dapeng-info-top-right div:nth-child(1) input
+{
+	position: fixed;
+	left:417px;
+	top:100px;
+	width:80px;
+	height:25px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 种植种类 */
+.dapeng-info-top-right div:nth-child(2) .dapeng-infoSpan
+{
+	position: fixed;
+	left:341px;
+	top:153px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 种植种类文本框 */
+.dapeng-info-top-right div:nth-child(2) input
+{
+	position: fixed;
+	left:417px;
+	top:150px;
+	width:80px;
+	height:25px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 种植时间 */
+.dapeng-info-top-right div:nth-child(3) .dapeng-infoSpan
+{
+	position: fixed;
+	left:341px;
+	top:203px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 种植时间控件 */
+.dapeng-info-top-right div:nth-child(3) #startTime,#plantTime
+{
+	position: fixed;
+	left:417px;
+	top:201px;
+	width:128px;
+	height:22px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 收获时间 */
+.dapeng-info-top-right div:nth-child(4) .dapeng-infoSpan
+{
+	position: fixed;
+	left:341px;
+	top:254px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 收获时间控件 */
+.dapeng-info-top-right div:nth-child(4) #endTime,#gainTime
+{
+	position: fixed;
+	left:417px;
+	top:252px;
+	width:128px;
+	height:22px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	border:1px solid #AAAAAA;
+}
+/* 适宜温度 */
+.dapeng-info-top-right div:nth-child(5) span
+{
+	position: fixed;
+	left:341px;
+	top:304px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 下限文本框 */
+.dapeng-info-top-right div:nth-child(5) #minTemp
+{
+	position: fixed;
+	width:33px;
+	height:25px;
+	left:417px;
+	top:300px;
+	font-family: Arial;
+	font-size: 13px;
+	color:#000000;
+}
+/* "°C ~" */
+.dapeng-info-top-right div:nth-child(5) span:nth-child(3)
+{
+	position: fixed;
+	left:454px;
+	top:304px;
+	font-size: 13px;
+}
+/* 上限文本框 */
+.dapeng-info-top-right div:nth-child(5) #maxTemp
+{
+	position: fixed;
+	width:33px;
+	height:25px;
+	left:485px;
+	top:300px;
+	font-family: Arial;
+	font-size: 13px;
+	color:#000000;
+}
+/* "°C" */
+.dapeng-info-top-right div:nth-child(5) span:nth-child(5)
+{
+	position: fixed;
+	left:522px;
+	top:304px;
+	font-size: 13px;
+}
+/* 适宜湿度 */
+.dapeng-info-top-right div:nth-child(6) span
+{
+	position: fixed;
+	left:341px;
+	top:354px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 下限文本框 */
+.dapeng-info-top-right div:nth-child(6) #minMoist
+{
+	position: fixed;
+	width:33px;
+	height:25px;
+	left:417px;
+	top:350px;
+	font-family: Arial;
+	font-size: 13px;
+	color:#000000;
+}
+/* "% ~" */
+.dapeng-info-top-right div:nth-child(6) span:nth-child(3)
+{
+	position: fixed;
+	left:454px;
+	top:354px;
+	font-size: 13px;
+}
+/* 上限文本框 */
+.dapeng-info-top-right div:nth-child(6) #maxMoist
+{
+	position: fixed;
+	width:33px;
+	height:25px;
+	left:485px;
+	top:350px;
+	font-family: Arial;
+	font-size: 13px;
+	color:#000000;
+}
+/* "%" */
+.dapeng-info-top-right div:nth-child(6) span:nth-child(5)
+{
+	position: fixed;
+	left:522px;
+	top:354px;
+	font-size: 13px;
+}
+/* 更新按钮，创建按钮 */
+#dapeng-info-table-edit .updateDapengInfo,#btn-create-farm
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:189px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#dapeng-info-table-edit .cancelDapengInfo,#cancelRegNewFarm
+{
+	position: fixed;
+	width:80px;
+	height:30px;
+	left:397px;
+	top:460px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 删除大棚确认对话框 */
+#dapengInfo-deleteFarm
+{
+	position: fixed;
+	z-index: 3;
+	transform: translate(0,0);
+	left:416px;
+	top:186px;
+	width:448px;
+	height:258px;
+	border:1px solid #797979;
+	border-radius:5px;
+	background: #F2F2F2;
+	box-shadow:5px 5px 5px #99A09D;
+	display: none;
+}
+/* 关闭图标 */
+#dapengInfo-deleteFarm #closeIcon-deleteFarm
+{
+	position: fixed;
+	width:32px;
+	height:32px;
+	left:407px;
+	top:7px;
+}
+/* 叹号坐标 */
+#dapengInfo-deleteFarm img:nth-child(2)
+{
+	position: fixed;
+	width:78px;
+	height:78px;
+	left:32px;
+	top:44px;
+}
+/* 警告信息 */
+/* 警告信息第一行 */
+#dapengInfo-deleteFarm .warnInfo span:nth-child(1)
+{
+	position: fixed;
+	left:128px;
+	top:66px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 警告信息第二行 */
+#dapengInfo-deleteFarm .warnInfo span:nth-child(3)
+{
+	position: fixed;
+	left:128px;
+	top:101px;
+	font-family:"微软雅黑";
+	font-size: 13px;
+	color:#333333;
+}
+/* 确定按钮 */
+#dapengInfo-deleteFarm #deleteFarmSure
+{
+	position: fixed;
+	left:122px;
+	top:179px;
+	width:80px;
+	height:30px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}
+/* 取消按钮 */
+#dapengInfo-deleteFarm #deleteFarmCancle
+{
+	position: fixed;
+	left:268px;
+	top:179px;
+	width:80px;
+	height:30px;
+	background: #EAEAEA;
+	border:1px solid #A5A5A5;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color:#000000;
+	cursor: pointer;
+}

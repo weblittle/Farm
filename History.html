@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>数据搜索</title>
+	<link type="text/css" rel="stylesheet" href="css/jedate.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/History.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/echarts.common.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jedate.js"></script>
+	<script src="js/History.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div id="logo">
+				<img src="imges/logo-mini.png">
+			</div>
+			<div id="nav">
+				<div id="nav1" title="农场概况" class="nav-ico" onclick="javascript:location.href='index.html' ">
+					<img src="imges/head/nav11.png" onmouseover="this.src='imges/head/nav1.png';" onmouseout="this.src='imges/head/nav11.png';">
+				</div>
+				<div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+					<img src="imges/head/nav22.png" onmouseover="this.src='imges/head/nav2.png';" onmouseout="this.src='imges/head/nav22.png';">
+				</div>
+				<div id="nav3" title="视频监控" class="nav-ico">
+					<img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';" onmouseout="this.src='imges/head/nav33.png';">
+				</div>
+				<div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+					<img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';" onmouseout="this.src='imges/head/nav44.png';">
+				</div>
+				<div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='datasearch.html' ">
+					<img src="imges/head/nav5.png" onmouseover="this.src='imges/head/nav55.png';" onmouseout="this.src='imges/head/nav5.png';">
+				</div>
+				<div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+					<img src="imges/head/nav66.png" onmouseover="this.src='imges/head/nav6.png';" onmouseout="this.src='imges/head/nav66.png';">
+				</div>
+				<div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+					<img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';" onmouseout="this.src='imges/head/nav77.png';">
+				</div>
+				<div id="nav8" title="关于" class="nav-ico" onclick="javascript:location.href='aboutSystem.html' ">
+					<img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';" onmouseout="this.src='imges/head/nav88.png';">
+				</div>
+			</div>
+			<div id="user" title="账户">
+				<img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';" onmouseout="this.src='imges/head/nav99.png';">
+				<div id="accountForm">
+						<img src="imges/u122.png" alt="">
+						<p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+						<hr>
+						<p><a href="login.html" id="logOff">注销</a></p>
+					</div>
+					<script>
+						$("#user").click(function(){
+							$("#accountForm").show();
+						})
+						$("#accountForm").mouseleave(function(){
+							$("#accountForm").hide();
+						})
+					</script>
+			</div>
+			<hr id="hr">
+		</div>
+		<div class="datasearch-content">
+
+			<!-- 选择区域 -->
+			<div class="select-content">
+				<div class="selectDiv">
+					<span id="selectMonth">选择月份 :</span>
+					<input type="text" class="workinput wicon" id="input-month">
+				</div>
+				<div class="selectDiv">
+					<span id='farmNum'>大棚号 :</span>
+					<select name="" id="select-dapeng">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="selectDiv">
+					<span id="series">类别 :</span>
+					<select name="" id="leibie">
+						<option value="" id="firstSelect">请选择</option>
+					</select>
+				</div>
+				<div class="selectDiv">
+					<span id="remarkText">备注 :</span>
+					<select name="" id="remark">
+						<option value="0"></option>
+					</select>
+				</div>
+				<button id="query">查询</button>
+			</div>
+
+			<div class="lineChartBox">
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<div id="footer">
+			<p>
+				<p id="info">
+					版权所有
+					<span class="fuhao">©&nbsp;2017</span>
+					<a href="http://www.miit.gov.cn/">河南理工大学计算机科学与技术学院物联网系</a>
+				</p>
+				<p id="copyRights">豫
+					<span class="fuhao">ICP</span>备
+					<span class="fuhao">17014461</span>号
+				</p>
+			</p>
+		</div>
+		<script>
+			$('#input-month').jeDate({
+				isinitVal: true,
+				format: 'YYYY/MM'
+			});
+		</script>
+	</div>
+</body>
+
+</html>

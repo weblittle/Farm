@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<title>关于系统</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/aboutSystem.css">
+	<link rel="stylesheet" href="css/account.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/aboutSystem.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- 头部信息 -->
+		<div class="head">
+			<div id="logo">
+				<img src="imges/logo-mini.png">
+			</div>
+			<div id="nav">
+				<div id="nav1" title="农场概况" class="nav-ico" onclick="javascript:location.href='index.html' ">
+					<img src="imges/head/nav11.png" onmouseover="this.src='imges/head/nav1.png';" onmouseout="this.src='imges/head/nav11.png';">
+				</div>
+				<div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+					<img src="imges/head/nav22.png" onmouseover="this.src='imges/head/nav2.png';" onmouseout="this.src='imges/head/nav22.png';">
+				</div>
+				<div id="nav3" title="视频监控" class="nav-ico">
+					<img src="imges/head/nav33.png" onmouseover="this.src='imges/head/nav3.png';" onmouseout="this.src='imges/head/nav33.png';">
+				</div>
+				<div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+					<img src="imges/head/nav44.png" onmouseover="this.src='imges/head/nav4.png';" onmouseout="this.src='imges/head/nav44.png';">
+				</div>
+				<div id="nav5" title="历史查询" class="nav-ico" onclick="javascript:location.href='History.html' ">
+					<img src="imges/head/nav55.png" onmouseover="this.src='imges/head/nav5.png';" onmouseout="this.src='imges/head/nav55.png';">
+				</div>
+				<div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+					<img src="imges/head/nav66.png" onmouseover="this.src='imges/head/nav6.png';" onmouseout="this.src='imges/head/nav66.png';">
+				</div>
+				<div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+					<img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';" onmouseout="this.src='imges/head/nav77.png';">
+				</div>
+				<div id="nav8" title="关于" class="nav-ico" onclick="javascript:location.href='aboutSystem.html' ">
+					<img src="imges/head/nav8.png" onmouseover="this.src='imges/head/nav88.png';" onmouseout="this.src='imges/head/nav8.png';">
+				</div>
+			</div>
+			<div id="user" title="账户">
+				<img src="imges/head/nav99.png" onmouseover="this.src='imges/head/nav9.png';" onmouseout="this.src='imges/head/nav99.png';">
+				<div id="accountForm">
+						<img src="imges/u122.png" alt="">
+						<p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+						<hr>
+						<p><a href="login.html" id="logOff">注销</a></p>
+					</div>
+					<script>
+						$("#user").click(function(){
+							$("#accountForm").show();
+						})
+						$("#accountForm").mouseleave(function(){
+							$("#accountForm").hide();
+						})
+					</script>
+			</div>
+		</div>
+		<!-- 主要内容 -->
+		<div class="container">
+			<div class="section1">
+				<!-- 系统简介 -->
+				<p class="title">系统简介</p>
+				<div id="advantage">
+					<div>
+						<img src="imges/aboutSystemImage/u175.png" alt="实用">
+						<p class="feature" id="userful">实用</p>
+						<p class="details">智能监控温室大棚内的环境状
+							<br>况。方便用户及时了解和控制
+							<br>农作物的生长情况。</p>
+
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u139.png" alt="简洁">
+						<p class="feature" id="simple">简洁</p>
+						<p class="details">界面设计以用户为中心，直观
+							<br>明了。尽量满足用户希望轻易
+							<br>找寻信息的需求</p>
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u177.png" alt="便利">
+						<p class="feature" id="convenient">便利</p>
+						<p class="details">支持网页版和手机客户端，方
+							<br>便用户随时随地掌握大棚内的
+							<br>状况</p>
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u137.png" alt="省心">
+						<p class="feature" id="savaWorry">省心</p>
+						<p class="details">该系统由河南理工大学计算机
+							<br>学院物联网系师生合作开发。
+							<br>方便提供持续的后期维护服务</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="section2">
+				<!-- 开发团队 -->
+				<p class="title">开发团队</p>
+
+				<div id="code">
+					<p>
+						<img id="qqcode" src="imges/aboutSystemImage/qqcode_u173.jpg" alt="qq二维码">
+					</p>
+					<p>
+						<img id="wechat" src="imges/aboutSystemImage/wechatcode_u171.jpg" alt="微信二维码">
+					</p>
+				</div>
+
+				<div id="partner">
+					<div>	
+						<div>
+							<img src="imges/aboutSystemImage/u161.png" alt="头像">	
+						</div>	
+						<p class="name">彭维平</p>
+						<p class="job">项目主管</p>
+						<p class="jobDetails">主要负责物联网信息系统的
+							<br>开发与建设；
+							<br>从事信息安全、数据防泄漏、
+							<br> 物联网安全及应用等方面的
+							<br>研究
+						</p>
+					</div>
+					<div>
+						<div>
+							<img src="imges/aboutSystemImage/u159.png" alt="头像">
+						</div>
+						<p class="name">倪水平</p>
+						<p class="job">项目副主管</p>
+						<p class="jobDetails">
+							主要负责嵌入式系统开发，远
+							<br>程无线监控系统硬件平台的开
+							<br>发设计
+						</p>
+					</div>
+					<div id="teacherChen">
+						<div>
+							<img src="imges/aboutSystemImage/u143.png" alt="头像">
+						</div>
+						<p class="name">陈扬君</p>
+						<p class="job">系统设计师</p>
+						<p class="jobDetails">“要么做第一个，要么做最好
+							<br>的一个”。坚持以用户为
+							<br> 中心，设计开发好用、易用
+							<br> 和用户乐于使用的产品
+						</p>
+						<p id="communicate">
+							<img src="imges/aboutSystemImage/u169.png" alt="QQ" id="qqIcon">
+							<img src="imges/aboutSystemImage/u167.png" alt="微信" id="weixinIcon">
+						</p>
+					</div>
+					<div>
+						<div>
+							<img src="imges/aboutSystemImage/u153.png" alt="头像">
+						</div>
+						<p class="name">郭淑君</p>
+						<p class="job">前端工程师</p>
+						<p class="jobDetails">自信、乐观、责任心强。
+							<br> 拥有强烈的求知欲和良好的
+							<br> 学习能力。
+							<br>精通HTML、DIV+CSS、
+							<br>JavaScript/ActionScript等</p>
+					</div>
+					<div class="secondRow" id="setLonely">
+						<div>
+							<img src="imges/aboutSystemImage/u155.png" alt="头像">
+						</div>
+						<p class="name">杨丛丛</p>
+						<p class="job">前端工程师</p>
+						<p class="jobDetails">
+							喜爱书法和打羽毛球。
+							<br> 座右铭：无论何时，只要可
+							<br>能，你都应该"模仿"你自己，
+							<br>成为你自己
+						</p>
+					</div>
+					<div class="secondRow">
+						<div>
+							<img src="imges/aboutSystemImage/u163.png" alt="头像">
+						</div>
+						<p class="name">左翔宇</p>
+						<p class="job">后台工程师</p>
+						<p class="jobDetails">
+							喜爱逆向工程;
+							<br>摩羯座;
+							<br> 知识与避世的Cirn09;
+							<br> Moe is Justice
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="section3">
+				<p class="title">联系我们</p>
+				<div id="contact">
+					<div>
+						<img src="imges/aboutSystemImage/u183.png" alt="联系电话">
+						<p>电话： +86 177 0391 9604</p>
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u181.png" alt="邮箱">
+						<p>邮箱
+						<br> chrischen@hpu.edu.cn</p>
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u179.png" alt="地图">
+						<p>地址： 河南省焦作市
+							<br> 高新区世纪路2001号
+							<br> 河南理工大学
+							<br> 计算机科学与技术学院
+							<br> 物联网系
+						</p>
+					</div>
+					<div>
+						<img src="imges/aboutSystemImage/u141.png" alt="网址">
+						<p>学院网址：
+							<br>
+							<a href="http://cst.hpu.edu.cn/" id="internetAddr">http://cst.hpu.edu.cn/</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<div id="footer">
+			<p>
+				<p id="info">
+					版权所有
+					<span class="fuhao">©&nbsp;2017</span>
+					<a href="http://www.miit.gov.cn/">河南理工大学计算机科学与技术学院物联网系</a>
+				</p>
+				<p id="copyRights">豫
+					<span class="fuhao">ICP</span>备
+					<span class="fuhao">17014461</span>号</p>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

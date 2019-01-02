@@ -1,0 +1,270 @@
+/* 信息筛选 */
+/* 选择月份文字 */
+#selectMonth
+{
+	position: fixed;
+	left:236px;
+	top:96px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#333333;
+}
+/* 选择月份控件 */
+#input-month
+{
+	position: fixed;
+	left:302px;
+	top:93px;
+	width:124px;
+	height:16px;
+	font-family: "Arial Regular";
+	font-size: 12px;
+	color:#000000;
+}
+/* 大棚号文字 */
+#farmNum
+{
+	position: fixed;
+	left:453px;
+	top:96px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#333333;
+}
+/* 大棚号下拉列表 */
+#select-dapeng
+{
+	position: fixed;
+	left:507px;
+	top:94px;
+	width:84px;
+	height:21px;
+	font-family: "Arial Regular";
+	font-size: 12px;
+	color:#000000;
+}
+/* 类别文字 */
+#series
+{
+	position: fixed;
+	left:615px;
+	top:96px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#333333;
+}
+/* 传感器类别下拉列表 */
+#leibie
+{
+	position: fixed;
+	left:657px;
+	top:94px;
+	width:84px;
+	height:21px;
+	font-family: "Arial Regular";
+	font-size: 12px;
+	color:#000000;
+}
+/* 备注文字 */
+#remarkText
+{
+	position: fixed;
+	left:764px;
+	top:96px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#333333;
+}
+/* 传感器备注下拉列表 */
+#remark{
+	position: fixed;
+	left:806px;
+	top:94px;
+	width:84px;
+	height:21px;
+	font-family: "Arial Regular";
+	font-size: 12px;
+	color:#000000;
+}
+/* 查询按钮 */
+#query
+{
+	position: fixed;
+	left:990px;
+	top:90px;
+	width:60px;
+	height:25px;
+	text-align: center;
+	background: #0099FF;
+	border-radius: 5px;
+	font-family:"微软雅黑";
+	font-size: 12px;
+	font-weight:700;
+	color:#fff;
+	outline: none;
+	border:none;
+	cursor: pointer;
+}
+#query:hover {
+	background: #00aaff;
+}
+/* 图表容器 */
+.lineChartBox {
+	width:1000px;
+	height: 480px;
+	/* position: relative; */
+	box-sizing: border-box;
+	margin: 129px auto;
+	margin-left:191px;
+	overflow-y: scroll;
+}
+
+.LineChart-wrap {
+	width: 880px;
+	height: 321px;
+	position: relative;
+	box-sizing: border-box;
+	top:0px;
+	left:0px;
+}
+/* 某月图表 */
+.LineChart {
+	width: 880px;
+	height: 291px;
+	box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	background: #FBFDFE;
+	position: absolute;
+	z-index: 3;
+	left: 0px;
+	top: 30px;
+	display: none;
+}
+/* 某月图表头部信息 */
+.LineChart .LineChart-head {
+	font-family: "Microsoft YaHei Regular", "Microsoft YaHei";
+	font-size: 14px;
+	color: #333333;
+}
+
+.LineChart .LineChart-head #showMonth1 {
+	position: absolute;
+	left:47px;
+	top:15px;
+}
+.LineChart .LineChart-head #month{
+	position: absolute;
+	left:114px;
+	top:15px;
+}
+.LineChart .LineChart-head #showHouseName1 {
+	position: absolute;
+	left:187px;
+	top:15px;
+}
+.LineChart .LineChart-head #deviceTypeInfo1
+{
+	position: absolute;
+	left:300px;
+	top:15px;
+}
+.LineChart .LineChart-head #chartForMonthDelete {
+	width: 60px;
+	height: 25px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	background: #CCCCCC;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	left:799px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.LineChart .LineChart-head #chartForMonthDelete:hover {
+	background: #f00;
+}
+
+.LineChart .lineChartShowForMonth {
+	width:100%;
+	height:246px;
+	position: absolute;
+	top:50px;
+}
+
+/* 显示每天环境参数的折线图样式 */
+.LineChartForDay {
+	width: 880px;
+	height: 291px;
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	background: #FBFDFE;
+	z-index: 4;
+	left:0px;
+	top:0px;
+	display: none;
+	box-shadow: 5px 5px 4px #cccccc;
+}
+/* 某日图表头部信息 */
+.LineChartForDay .LineChartForDay-head {
+	line-height: 40px;
+	font-family: "Microsoft YaHei Regular", "Microsoft YaHei";
+	font-size: 14px;
+	color: #333333;
+}
+
+.LineChartForDay .LineChartForDay-head #showMonth2 {
+	position: absolute;
+	left:47px;
+	top:15px;
+}
+.LineChartForDay .LineChartForDay-head #day{
+	position: absolute;
+	left:124px;
+	top:15px;
+}
+.LineChartForDay .LineChartForDay-head #showHouseName2 {
+	position: absolute;
+	left:187px;
+	top:15px;
+}
+.LineChartForDay .LineChartForDay-head #deviceTypeInfo2
+{
+	position: absolute;
+	left:300px;
+	top:15px;
+}
+.LineChartForDay .LineChartForDay-head #chartForDayDelete {
+	width: 60px;
+	height: 25px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	background: #CCCCCC;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	left:799px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.LineChartForDay .LineChartForDay-head #chartForDayDelete:hover {
+	background: #f00;
+}
+
+.LineChartForDay .lineChartShowForDay {
+	width:100%;
+	height:246px;
+	position: absolute;
+	top:50px;
+
+}
+
+

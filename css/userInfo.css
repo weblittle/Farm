@@ -1,0 +1,167 @@
+.content{
+	width:560px;
+	height:460px;
+	position: relative;
+	box-sizing: border-box;
+	background: #F6F9F8;
+	border: 1px solid #666;
+	border-radius: 5px;
+	margin:110px auto;
+	font-family: '微软雅黑';
+}
+.content h4{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color:#333333;
+	margin-top: 38px;
+}
+.content .headImage{
+	width:120px;
+	height: 140px;
+	position: absolute;
+	border:1px solid #797979; 
+	left: 51px;
+	top:92px;
+}
+.headImage img{
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top:20px;
+	left:5px;
+}
+/* 上传按钮 */
+button#upload{
+	width: 80px;
+	height:30px;
+	position: absolute;
+	left: 71px;
+	top:242px;
+	cursor: pointer;
+}
+/* 用户id */
+ .infoP:nth-child(4) span:nth-child(1){
+	position: absolute;
+	left:221px;
+	top:92px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+	
+}
+ .infoP:nth-child(4) span:nth-child(2){
+	position: absolute;
+	left:288px;
+	top:92px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
+/* 用户名 */
+.infoP:nth-child(5) span:nth-child(1)
+{
+	position: absolute;
+	left:221px;
+	top:132px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+}
+.infoP:nth-child(5) span:nth-child(2){
+	position: absolute;
+	left:288px;
+	top:133px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
+/* 更改密码 */
+ .infoP:nth-child(5) #changePwd{
+	position: absolute;
+	left:373px;
+	top:133px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #0066ff;
+}
+ .infoP:nth-child(5) #changePwd:hover{
+	text-decoration:underline;
+}
+/* 姓名 */
+.infoP:nth-child(6) span:nth-child(1)
+{
+	position: absolute;
+	left:221px;
+	top:172px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+}
+.infoP:nth-child(6) span#name
+{
+	position: absolute;
+	left:288px;
+	top:174px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
+/* 手机号 */
+.infoP:nth-child(7) span:nth-child(1)
+{
+	position: absolute;
+	left:221px;
+	top:212px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+}
+.infoP:nth-child(7) span#phoneNum
+{
+	position: absolute;
+	left:288px;
+	top:214px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
+/* 身份证号 */
+.infoP:nth-child(8) span:nth-child(1)
+{
+	position: absolute;
+	left:221px;
+	top:252px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+}
+.infoP:nth-child(8) span#idCard
+{
+	position: absolute;
+	left:288px;
+	top:253px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
+/* 用户类型 */
+.infoP:nth-child(9) span:nth-child(1)
+{
+	position: absolute;
+	left:221px;
+	top:292px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#666666;
+}
+.infoP:nth-child(9) span#userType
+{
+	position: absolute;
+	left:288px;
+	top:292px;
+	font-family: "微软雅黑";
+	font-size:13px;
+	color:#333333;
+}
